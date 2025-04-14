@@ -316,6 +316,7 @@ script = SubResource("GDScript_8ls10")
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 anchors_preset = -1
+anchor_left = -1.13455
 anchor_right = -1.13455
 anchor_bottom = 1.0
 offset_left = -1082.0
