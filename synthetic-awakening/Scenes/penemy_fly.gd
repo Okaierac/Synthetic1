@@ -12,8 +12,10 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	player = body
 	player_chase = true
+	speed = 40
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	var player_chase = false
 	var player = null
+	speed = 9999999999999999999

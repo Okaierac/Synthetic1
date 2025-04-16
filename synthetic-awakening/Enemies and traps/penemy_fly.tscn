@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cxotdk1x3j81j" path="res://Enemies/Penemies/Fly.png" id="2_3uw1m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6tgv"]
-radius = 158.0
+radius = 237.002
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ariri"]
 radius = 23.0868
