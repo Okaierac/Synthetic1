@@ -1,10 +1,11 @@
+Panel
+Container
 VBoxContainer
 VSeparator
 Camera2D
 Button
 VSplitContainer
 Label
-Panel
 Node
 CollisionShape2D
 Area2D
