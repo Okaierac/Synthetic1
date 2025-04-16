@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dytvdupd72nx"]
+
+[ext_resource type="Texture2D" uid="uid://xludn5yth3fq" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png.png" id="1_ldjqp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_66gel"]
+radius = 21.0
+height = 58.0
+
+[node name="Penemy_Knight" type="CharacterBody2D"]
+position = Vector2(322, 318610)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.00001, 1.00469)
+scale = Vector2(0.315, 0.294337)
+texture = ExtResource("1_ldjqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+shape = SubResource("CapsuleShape2D_66gel")

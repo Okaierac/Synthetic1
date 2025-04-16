@@ -1,10 +1,10 @@
+CollisionShape2D
+Sprite2D
+CharacterBody2D
 Button
 VSplitContainer
 Label
 Panel
 Node
-CollisionShape2D
 Area2D
-Sprite2D
-CharacterBody2D
 AnimatedSprite2D
