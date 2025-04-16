@@ -1,5 +1,4 @@
 res://Scenes/side_main.tscn
-res://Scenes/penemy_fly.gd
 res://Scenes/main.tscn
 res://Player/player_side.tscn
 res://Scenes/topdown_main.tscn
