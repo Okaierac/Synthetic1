@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyh3apc4hgh83"]
+
+[ext_resource type="Texture2D" uid="uid://dopnmlwmro6jr" path="res://Background/B_Placeholder/Pixel-Art-Coffee.png" id="1_vy3vv"]
+[ext_resource type="FontFile" uid="uid://cu1fdibbffv8p" path="res://Fonts/Glitch Font/SdglitchdemoRegular-YzROj.ttf" id="2_86ea6"]
+[ext_resource type="Texture2D" uid="uid://ds1vxc3ye01lw" path="res://Background/B_Placeholder/Glitch Backgorund.jpg" id="3_ffpa7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eno1g"]
+texture = ExtResource("1_vy3vv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ctvin"]
+texture = ExtResource("3_ffpa7")
+
+[node name="Main_Menu" type="Node"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1153.0
+offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_eno1g")
+
+[node name="Title Shadow" type="Label" parent="."]
+offset_left = 322.0
+offset_top = 76.0
+offset_right = 901.0
+offset_bottom = 173.0
+theme_override_colors/font_shadow_color = Color(0.724175, 0.1245, 0.83, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_fonts/font = ExtResource("2_86ea6")
+theme_override_font_sizes/font_size = 72
+text = "Synthetic Awakening"
+
+[node name="Title" type="Label" parent="Title Shadow"]
+layout_mode = 0
+offset_right = 242.0
+offset_bottom = 41.0
+theme_override_colors/font_shadow_color = Color(0.1245, 0.206808, 0.83, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_fonts/font = ExtResource("2_86ea6")
+theme_override_font_sizes/font_size = 72
+text = "Synthetic Awakening"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 494.0
+offset_top = 289.0
+offset_right = 719.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("2_86ea6")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxTexture_ctvin")
+text = "Start
+"

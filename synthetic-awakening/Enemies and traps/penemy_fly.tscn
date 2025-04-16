@@ -1,22 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgt36528ywoa3"]
+[gd_scene load_steps=5 format=3 uid="uid://gsnkh1mp864v"]
 
-[ext_resource type="Script" path="res://Scenes/penemy_fly.gd" id="1_s4r0u"]
-[ext_resource type="Texture2D" uid="uid://cxotdk1x3j81j" path="res://Enemies/Penemies/Fly.png" id="2_3hdaf"]
+[ext_resource type="Script" path="res://Scenes/penemy_fly.gd" id="1_j0bhe"]
+[ext_resource type="Texture2D" uid="uid://cxotdk1x3j81j" path="res://Enemies/Penemies/Fly.png" id="2_3uw1m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6tgv"]
-radius = 170.047
+radius = 158.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ariri"]
 radius = 23.0868
 
 [node name="Penemy_Fly" type="CharacterBody2D"]
-position = Vector2(897, 318439)
-script = ExtResource("1_s4r0u")
+position = Vector2(896, 318461)
+script = ExtResource("1_j0bhe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7.39098e-06, 0.00283068)
 scale = Vector2(0.3275, 0.342467)
-texture = ExtResource("2_3hdaf")
+texture = ExtResource("2_3uw1m")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2

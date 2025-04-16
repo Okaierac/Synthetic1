@@ -1,4 +1,6 @@
+res://Enemies and traps/penemy_fly.tscn
 res://Scenes/side_main.tscn
+res://Scenes/penemy_fly.gd
 res://Scenes/main.tscn
 res://Player/player_side.tscn
 res://Scenes/topdown_main.tscn
@@ -8,3 +10,4 @@ res://Npcs/test_npc.tscn
 res://Enemies and traps/portal.tscn
 res://Npcs/jeff.tscn
 res://Scenes/change_scene_item.tscn
+res://Main_Menu/main_menu.tscn
