@@ -29,6 +29,7 @@ theme_override_font_sizes/font_size = 72
 text = "Synthetic Awakening"
 
 [node name="Title" type="Label" parent="Title Shadow"]
+layout_mode = 0
 offset_right = 242.0
 offset_bottom = 41.0
 theme_override_colors/font_shadow_color = Color(0.1245, 0.206808, 0.83, 1)
