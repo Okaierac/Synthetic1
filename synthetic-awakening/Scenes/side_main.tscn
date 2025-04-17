@@ -339,6 +339,7 @@ scale = Vector2(1.94888, 1.95387)
 [node name="Penemy_Fly" parent="." instance=ExtResource("5_a48we")]
 
 [node name="Penemy_Knight" parent="." instance=ExtResource("6_njkmn")]
+position = Vector2(1606, 317611)
 script = ExtResource("7_vutud")
 
 [node name="Objective" parent="." instance=ExtResource("4_h60lv")]
