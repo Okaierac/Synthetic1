@@ -11,5 +11,3 @@ res://Scenes/change_scene_item.tscn
 res://Main_Menu/main_menu.tscn
 res://Enemies and traps/penemy_fly.tscn
 res://Enemies and traps/penemy_knight.tscn
-res://Enemies and traps/penemy_knight.gd
-res://Player/Scripts/player_side.gd

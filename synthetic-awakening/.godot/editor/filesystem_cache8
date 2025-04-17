@@ -1,9 +1,9 @@
 6b83eef13f46d74bce552f92a480ef09
-::res://::1744901566
+::res://::1744904381
 icon.svg::CompressedTexture2D::2102721303947116860::1740507117::1744815401::1::::<><>::
 penemy_basic_code.gd::GDScript::-1::1744818431::0::1::::<>CharacterBody2D<>::
 state.gd::GDScript::-1::1740507117::0::1::::<>Node<>::
-::res://addons/::1740507117
+::res://addons/::1744904504
 ::res://addons/dialogue_manager/::1740507117
 constants.gd::GDScript::-1::1740507117::0::1::::DMConstants<>RefCounted<>::
 dialogue_label.gd::GDScript::-1::1740507117::0::1::::DialogueLabel<>RichTextLabel<>res://addons/dialogue_manager/assets/icon.svg::
@@ -77,6 +77,24 @@ dialogue_cache.gd::GDScript::-1::1740507117::0::1::::DMCache<>Node<>::
 ::res://addons/dialogue_manager/views/::1740507117
 main_view.gd::GDScript::-1::1740507117::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1740507117::0::1::::<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://0n7hwviyyly4::::res://addons/dialogue_manager/components/find_in_files.tscn
+::res://addons/quest_system/::1744904504
+abstract_manager.gd::GDScript::-1::1744904504::0::1::::AbstractQuestManagerAPI<>Node<>::
+active_pool.gd::GDScript::-1::1744904504::0::1::::ActiveQuestPool<>BaseQuestPool<>::
+available_pool.gd::GDScript::-1::1744904504::0::1::::AvailableQuestPool<>BaseQuestPool<>::
+base_quest_pool.gd::GDScript::-1::1744904504::0::1::::BaseQuestPool<>Node<>::
+completed_pool.gd::GDScript::-1::1744904504::0::1::::CompletedQuestPool<>BaseQuestPool<>::
+plugin.cfg::TextFile::-1::1744904504::0::1::::<><>::
+plugin.gd::GDScript::-1::1744904504::0::1::::<>EditorPlugin<>::
+quest_manager.gd::GDScript::-1::1744904504::0::1::::QuestSystemManagerAPI<>AbstractQuestManagerAPI<>::
+quest_resource.gd::GDScript::-1::1744904504::0::1::::Quest<>Resource<>res://addons/quest_system/assets/quest_resource.svg::
+settings.gd::GDScript::-1::1744904504::0::1::::QuestSystemSettings<>RefCounted<>::
+translation_plugin.gd::GDScript::-1::1744904504::0::1::::<>EditorTranslationParserPlugin<>::
+::res://addons/quest_system/assets/::1744904504
+quest_resource.svg::CompressedTexture2D::6709963747693466442::1744904504::1744904505::1::::<><>::
+update.svg::CompressedTexture2D::6358970041606497925::1744904504::1744904505::1::::<><>::
+::res://addons/quest_system/views/::1744904504
+update_dialog.gd::GDScript::-1::1744904504::0::1::::<>AcceptDialog<>::
+update_dialog.tscn::PackedScene::7423343966737306925::1744904504::0::1::::<><>::res://addons/quest_system/views/update_dialog.gd<>uid://cwulkprc5aq8d::::res://addons/quest_system/assets/update.svg
 ::res://Background/::1740507117
 ::res://Background/B_Placeholder/::1744815402
 Glitch Backgorund.jpg::CompressedTexture2D::8477651337675381116::1744815349::1744815402::1::::<><>::
@@ -88,13 +106,13 @@ tp.dialogue::Resource::7459908701795832690::1740507117::1744815400::1::::<><>::r
 ::res://Enemies/::1744215837
 ::res://Enemies/Penemies/::1744815401
 Fly.png::CompressedTexture2D::6417245606343302505::1744215808::1744815401::1::::<><>::
-::res://Enemies and traps/::1744819871
-penemy_fly.tscn::PackedScene::459099448641253091::1744819871::0::1::::<><>::res://Scenes/penemy_fly.gd<>uid://cxotdk1x3j81j::::res://Enemies/Penemies/Fly.png
-penemy_knight.gd::GDScript::-1::1744819836::0::1::::<>CharacterBody2D<>::
-penemy_knight.tscn::PackedScene::261302910699065933::1744819871::0::1::::<><>::uid://xludn5yth3fq::::res://Side Characters/Sprites/thumbnail_Final knight-6.png.png
+::res://Enemies and traps/::1744904391
+penemy_fly.tscn::PackedScene::459099448641253091::1744904391::0::1::::<><>::res://Scenes/penemy_fly.gd<>uid://cxotdk1x3j81j::::res://Enemies/Penemies/Fly.png
+penemy_knight.gd::GDScript::-1::1744904143::0::1::::<>CharacterBody2D<>::
+penemy_knight.tscn::PackedScene::261302910699065933::1744904391::0::1::::<><>::uid://xludn5yth3fq::::res://Side Characters/Sprites/thumbnail_Final knight-6.png.png
 portal.gd::GDScript::-1::1740507117::0::1::::<>Area2D<>::
 portal.png::CompressedTexture2D::6924509813176006518::1740507117::1744815401::1::::<><>::
-portal.tscn::PackedScene::7673905239529953493::1744819871::0::1::::<><>::uid://d3myelr8tj6bv::::res://Enemies and traps/PortalforTP.png<>res://Enemies and traps/portal.gd<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
+portal.tscn::PackedScene::7673905239529953493::1744904391::0::1::::<><>::uid://d3myelr8tj6bv::::res://Enemies and traps/PortalforTP.png<>res://Enemies and traps/portal.gd<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
 PortalforTP.png::CompressedTexture2D::9150787162538617611::1740507117::1744815401::1::::<><>::
 ::res://Floor/::1740507117
 ::res://Floor/Platformer/::1740507117
@@ -104,26 +122,26 @@ Terrain (16x16).png::CompressedTexture2D::5715076219198624420::1740507117::17448
 ::res://Fonts/Glitch Font/::1744815400
 info.txt::TextFile::-1::1744815349::0::1::::<><>::
 SdglitchdemoRegular-YzROj.ttf::FontFile::6230601425881895581::1744815349::1744815400::1::::<><>::
-::res://Interaction components/::1744819870
+::res://Interaction components/::1744904390
 interactable.gd::GDScript::-1::1740507117::0::1::::<>Area2D<>::
 interactable.tscn::PackedScene::4158919115439677164::1740507117::0::1::::<><>::res://Interaction components/interactable.gd
 interaction_component.gd::GDScript::-1::1740507117::0::1::::<>Node2D<>::
-interaction_component.tscn::PackedScene::7070228342586956964::1744819870::0::1::::<><>::res://Interaction components/interaction_component.gd
+interaction_component.tscn::PackedScene::7070228342586956964::1744904390::0::1::::<><>::res://Interaction components/interaction_component.gd
 ::res://Items/::1744815401
 Change_Scene_(Item).gd::GDScript::-1::1741027087::0::1::::<>Area2D<>::
 End (Idle).png::CompressedTexture2D::8514660648826640035::1740507117::1744815401::1::::<><>::
-::res://Main_Menu/::1744819871
-main_menu.tscn::PackedScene::6473525127041946458::1744819871::0::1::::<><>::uid://dopnmlwmro6jr::::res://Background/B_Placeholder/Pixel-Art-Coffee.png<>uid://cu1fdibbffv8p::::res://Fonts/Glitch Font/SdglitchdemoRegular-YzROj.ttf<>uid://ds1vxc3ye01lw::::res://Background/B_Placeholder/Glitch Backgorund.jpg
-::res://Npcs/::1744819871
+::res://Main_Menu/::1744904391
+main_menu.tscn::PackedScene::6473525127041946458::1744904391::0::1::::<><>::uid://dopnmlwmro6jr::::res://Background/B_Placeholder/Pixel-Art-Coffee.png<>uid://cu1fdibbffv8p::::res://Fonts/Glitch Font/SdglitchdemoRegular-YzROj.ttf<>uid://ds1vxc3ye01lw::::res://Background/B_Placeholder/Glitch Backgorund.jpg
+::res://Npcs/::1744904391
 jeff.gd::GDScript::-1::1741027087::0::1::::<>CharacterBody2D<>::
-jeff.tscn::PackedScene::9204780001166771523::1744819871::0::1::::<><>::uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>res://Npcs/jeff.gd<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
-test_npc.tscn::PackedScene::8422045674903926693::1744819870::0::1::::<><>::res://Npcs/tp_npc.gd<>uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
+jeff.tscn::PackedScene::9204780001166771523::1744904391::0::1::::<><>::uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>res://Npcs/jeff.gd<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
+test_npc.tscn::PackedScene::8422045674903926693::1744904390::0::1::::<><>::res://Npcs/tp_npc.gd<>uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
 tp_npc.gd::GDScript::-1::1740507117::0::1::::<>CharacterBody2D<>::
-::res://Player/::1744819870
-player_side.tscn::PackedScene::8928190573776792460::1744819870::0::1::::<><>::res://Player/Scripts/player_side.gd<>uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>uid://ciivm7nt3fvir::::res://Player/Sprites/S_Placeholders/Jump (32x32).png<>uid://b8qoomrbdlvaj::::res://Player/Sprites/S_Placeholders/Run (32x32).png
-player_topdown.tscn::PackedScene::4773843060974415893::1744819870::0::1::::<><>::res://Player/Scripts/player_topdown.gd<>uid://ciivm7nt3fvir::::res://Player/Sprites/S_Placeholders/Jump (32x32).png<>uid://c7y4vl1gwhaga::::res://Interaction components/interaction_component.tscn
-::res://Player/Scripts/::1740507117
-player_side.gd::GDScript::-1::1740507117::0::1::::player_side<>CharacterBody2D<>::
+::res://Player/::1744904390
+player_side.tscn::PackedScene::8928190573776792460::1744904390::0::1::::<><>::res://Player/Scripts/player_side.gd<>uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>uid://ciivm7nt3fvir::::res://Player/Sprites/S_Placeholders/Jump (32x32).png<>uid://b8qoomrbdlvaj::::res://Player/Sprites/S_Placeholders/Run (32x32).png
+player_topdown.tscn::PackedScene::4773843060974415893::1744904390::0::1::::<><>::res://Player/Scripts/player_topdown.gd<>uid://ciivm7nt3fvir::::res://Player/Sprites/S_Placeholders/Jump (32x32).png<>uid://c7y4vl1gwhaga::::res://Interaction components/interaction_component.tscn
+::res://Player/Scripts/::1744903028
+player_side.gd::GDScript::-1::1744903028::0::1::::player_side<>CharacterBody2D<>::
 player_topdown.gd::GDScript::-1::1740507117::0::1::::player_topdown<>CharacterBody2D<>::
 State.gd::GDScript::-1::1740507117::0::1::::state<>Node<>::
 ::res://Player/Sprites/::1740507117
@@ -131,12 +149,12 @@ State.gd::GDScript::-1::1740507117::0::1::::state<>Node<>::
 Idle (32x32).png::CompressedTexture2D::4496714230942668855::1740507117::1744815401::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::5352165326628467453::1740507117::1744815401::1::::<><>::
 Run (32x32).png::CompressedTexture2D::4736558263418303045::1740507117::1744815401::1::::<><>::
-::res://Scenes/::1744821969
-change_scene_item.tscn::PackedScene::1098758651591119167::1744819871::0::1::::<><>::res://Items/Change_Scene_(Item).gd<>uid://dtkthmyg2av76::::res://Items/End (Idle).png
-main.tscn::PackedScene::5976168812085970492::1744819868::0::1::::<><>::uid://db8pfunv7r7kj::::res://Scenes/side_main.tscn<>uid://bt51kn760nd5i::::res://Scenes/topdown_main.tscn
+::res://Scenes/::1744904391
+change_scene_item.tscn::PackedScene::1098758651591119167::1744904391::0::1::::<><>::res://Items/Change_Scene_(Item).gd<>uid://dtkthmyg2av76::::res://Items/End (Idle).png
+main.tscn::PackedScene::5976168812085970492::1744904390::0::1::::<><>::uid://db8pfunv7r7kj::::res://Scenes/side_main.tscn<>uid://bt51kn760nd5i::::res://Scenes/topdown_main.tscn
 penemy_fly.gd::GDScript::-1::1744819868::0::1::::<>CharacterBody2D<>::
-side_main.tscn::PackedScene::7298496116009402053::1744821969::0::1::::<><>::uid://cv3qqolppobyk::::res://Background/B_Placeholder/Green.png<>uid://cnoop8yr1vx0o::::res://Floor/Platformer/FP_Placeholder/Terrain (16x16).png<>uid://d0g482o7qfegi::::res://Player/player_side.tscn<>uid://pwinn85rn4n0::::res://Scenes/change_scene_item.tscn<>uid://gsnkh1mp864v::::res://Enemies and traps/penemy_fly.tscn<>uid://dytvdupd72nx::::res://Enemies and traps/penemy_knight.tscn<>res://Enemies and traps/penemy_knight.gd
-topdown_main.tscn::PackedScene::3783537278868201832::1744819870::0::1::::<><>::uid://caaqq6npkg0u0::::res://Player/player_topdown.tscn<>uid://cv3qqolppobyk::::res://Background/B_Placeholder/Green.png<>uid://dr8x4kh1gtkaf::::res://Npcs/test_npc.tscn<>uid://dhlkdlov6r5f2::::res://Enemies and traps/portal.tscn<>uid://d4e4m8lv0gk1h::::res://Npcs/jeff.tscn
+side_main.tscn::PackedScene::7298496116009402053::1744904390::0::1::::<><>::uid://cv3qqolppobyk::::res://Background/B_Placeholder/Green.png<>uid://cnoop8yr1vx0o::::res://Floor/Platformer/FP_Placeholder/Terrain (16x16).png<>uid://d0g482o7qfegi::::res://Player/player_side.tscn<>uid://pwinn85rn4n0::::res://Scenes/change_scene_item.tscn<>uid://gsnkh1mp864v::::res://Enemies and traps/penemy_fly.tscn<>uid://dytvdupd72nx::::res://Enemies and traps/penemy_knight.tscn<>res://Enemies and traps/penemy_knight.gd
+topdown_main.tscn::PackedScene::3783537278868201832::1744904390::0::1::::<><>::uid://caaqq6npkg0u0::::res://Player/player_topdown.tscn<>uid://cv3qqolppobyk::::res://Background/B_Placeholder/Green.png<>uid://dr8x4kh1gtkaf::::res://Npcs/test_npc.tscn<>uid://dhlkdlov6r5f2::::res://Enemies and traps/portal.tscn<>uid://d4e4m8lv0gk1h::::res://Npcs/jeff.tscn
 ::res://Side Characters/::1740507117
 ::res://Side Characters/Sprites/::1744815401
 thumbnail_Final knight-6.png.png::CompressedTexture2D::1638271986470278930::1740507117::1744815401::1::::<><>::
