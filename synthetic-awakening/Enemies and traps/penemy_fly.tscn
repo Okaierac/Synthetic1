@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://gsnkh1mp864v"]
+[gd_scene load_steps=6 format=3 uid="uid://gsnkh1mp864v"]
 
 [ext_resource type="Script" path="res://Scenes/penemy_fly.gd" id="1_j0bhe"]
 [ext_resource type="Texture2D" uid="uid://cxotdk1x3j81j" path="res://Enemies/Penemies/Fly.png" id="2_3uw1m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bn1xw"]
+radius = 26.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6tgv"]
 radius = 237.002
@@ -13,6 +16,12 @@ radius = 23.0868
 position = Vector2(896, 318461)
 script = ExtResource("1_j0bhe")
 
+[node name="Damage_Collision" type="Area2D" parent="."]
+scale = Vector2(0.815761, 0.864516)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage_Collision"]
+shape = SubResource("CircleShape2D_bn1xw")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7.39098e-06, 0.00283068)
 scale = Vector2(0.3275, 0.342467)
@@ -23,10 +32,12 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_c6tgv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ariri")
 
+[connection signal="body_entered" from="Damage_Collision" to="." method="_on_damage_collision_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

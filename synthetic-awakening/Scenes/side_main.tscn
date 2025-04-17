@@ -338,3 +338,5 @@ scale = Vector2(1.94888, 1.95387)
 position = Vector2(1101, 318621)
 
 [node name="Penemy_Fly" parent="." instance=ExtResource("5_a48we")]
+
+[connection signal="Damage" from="Penemy_Fly" to="Player_Side" method="_on_penemy_fly_damage"]
