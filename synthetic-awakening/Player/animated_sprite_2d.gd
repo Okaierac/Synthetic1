@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_player_side_change_hp() -> void:
-	print("-1")
+	print("i luv u")

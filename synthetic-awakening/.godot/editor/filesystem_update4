@@ -1,9 +1,4 @@
-res://Player/player_side.tscn
-res://Scenes/penemy_fly.gd
-res://Enemies and traps/penemy_fly.tscn
-res://Player/Scripts/player_side.gd
 res://Scenes/side_main.tscn
-res://Player/animated_sprite_2d.gd
 res://Scenes/main.tscn
 res://Scenes/topdown_main.tscn
 res://Interaction components/interaction_component.tscn
@@ -13,3 +8,6 @@ res://Enemies and traps/portal.tscn
 res://Npcs/jeff.tscn
 res://Scenes/change_scene_item.tscn
 res://Main_Menu/main_menu.tscn
+res://Enemies and traps/penemy_fly.tscn
+res://Player/player_side.tscn
+res://Enemies and traps/penemy_knight.tscn

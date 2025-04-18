@@ -47,6 +47,6 @@ func _process(delta: float) -> void:
 
 
 
-func _on_penemy_fly_damage() -> void:
+func _on_penemy_knight_damage() -> void:
 	hp -= 1
-	emit_signal("change_hp")
+	change_hp.emit()

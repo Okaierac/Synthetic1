@@ -30,10 +30,10 @@ shadow_offset = Vector2(-3, 0)
 script = ExtResource("1_7o5e2")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 8.0
-offset_top = -4796.0
-offset_right = 1161.0
-offset_bottom = -4153.0
+offset_left = -11.0
+offset_top = -4790.0
+offset_right = 1142.0
+offset_bottom = -4142.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_eno1g")
 
 [node name="Title Shadow" type="Label" parent="."]
