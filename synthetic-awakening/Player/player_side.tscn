@@ -197,58 +197,78 @@ animations = [{
 radius = 11.0
 height = 28.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7ssc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qfv0"]
 atlas = ExtResource("5_ssbcy")
-region = Rect2(100, 0, 100, 75)
+region = Rect2(0, 0, 100, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j31gi"]
+atlas = ExtResource("5_ssbcy")
+region = Rect2(100, 150, 100, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tavy2"]
+atlas = ExtResource("5_ssbcy")
+region = Rect2(0, 150, 100, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbutp"]
+atlas = ExtResource("5_ssbcy")
+region = Rect2(100, 75, 100, 75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ugb5b"]
 atlas = ExtResource("5_ssbcy")
 region = Rect2(0, 75, 100, 75)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nv4h2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbcys"]
 atlas = ExtResource("5_ssbcy")
-region = Rect2(100, 75, 100, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wm2hr"]
-atlas = ExtResource("5_ssbcy")
-region = Rect2(0, 150, 100, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yyolt"]
-atlas = ExtResource("5_ssbcy")
-region = Rect2(100, 150, 100, 75)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o1ieb"]
-atlas = ExtResource("5_ssbcy")
-region = Rect2(0, 0, 100, 75)
+region = Rect2(100, 0, 100, 75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_guth3"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qfv0")
+}],
 "loop": true,
-"name": &"default",
+"name": &"0",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7ssc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ugb5b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nv4h2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wm2hr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yyolt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o1ieb")
+"texture": SubResource("AtlasTexture_j31gi")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tavy2")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbutp")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugb5b")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbcys")
+}],
+"loop": true,
+"name": &"5",
 "speed": 5.0
 }]
 
@@ -269,10 +289,9 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_1xprf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-12, -12)
-scale = Vector2(0.245, 0.245)
+position = Vector2(-229, -134)
 sprite_frames = SubResource("SpriteFrames_guth3")
-animation = &"new_animation"
+animation = &"5"
 script = ExtResource("6_ica5r")
 
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]

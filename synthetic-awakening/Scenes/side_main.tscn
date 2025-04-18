@@ -336,12 +336,13 @@ position = Vector2(253, 318603)
 scale = Vector2(1.94888, 1.95387)
 
 [node name="Penemy_Fly" parent="." instance=ExtResource("5_a48we")]
+position = Vector2(903, 318347)
 
 [node name="Penemy_Knight" parent="." instance=ExtResource("5_y2ymj")]
 position = Vector2(1377, 317835)
 
 [node name="Objective" parent="." instance=ExtResource("4_h60lv")]
-position = Vector2(1101, 318621)
+position = Vector2(3522, 318624)
 
 [connection signal="player_seen" from="Penemy_Fly" to="Penemy_Knight" method="_on_penemy_fly_player_seen"]
 [connection signal="damage" from="Penemy_Knight" to="Player_Side" method="_on_penemy_knight_damage"]
