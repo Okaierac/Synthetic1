@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://pwinn85rn4n0"]
+
+[ext_resource type="Script" path="res://Items/Change_Scene_(Item).gd" id="1_wsnd2"]
+[ext_resource type="Texture2D" uid="uid://dtkthmyg2av76" path="res://Items/End (Idle).png" id="2_y5m6y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jsnyo"]
+radius = 25.02
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_wsnd2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_y5m6y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_jsnyo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
