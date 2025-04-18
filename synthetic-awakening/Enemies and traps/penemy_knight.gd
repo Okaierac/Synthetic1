@@ -4,6 +4,7 @@ var speed = 300.0
 var player_detected = false
 var player_chase = false
 @onready var sprite_2d: Sprite2D = $Sprite2D
+signal damage
 
 func _on_penemy_fly_player_seen() -> void:
 	player_detected = true
@@ -25,3 +26,7 @@ func _physics_process(delta: float) -> void:
 		sprite_2d.flip_h = true  # Moving right, no flip
 	elif velocity.x < 0:
 		sprite_2d.flip_h = false   # Moving left, flip
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	damage.emit()

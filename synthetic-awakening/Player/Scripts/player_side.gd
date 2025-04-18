@@ -1,5 +1,6 @@
 class_name player_side extends CharacterBody2D
-
+var hp = 5
+signal change_hp
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
@@ -29,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, 20)
+	
 
 	move_and_slide()
 	
@@ -42,3 +44,9 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("right") and isFlipped:
 		sprite_2d.flip_h = false  # Unflip the sprite when right arrow is pressed
 		isFlipped = false  # Set the flip state to false
+
+
+
+func _on_penemy_knight_damage() -> void:
+	hp -= 1
+	change_hp.emit()

@@ -18,15 +18,16 @@ position = Vector2(-7.39098e-06, 0.00283068)
 scale = Vector2(0.3275, 0.342467)
 texture = ExtResource("2_3uw1m")
 
-[node name="Detection Area" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, 0)
 shape = SubResource("CircleShape2D_c6tgv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ariri")
 
-[connection signal="body_entered" from="Detection Area" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Detection Area" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
