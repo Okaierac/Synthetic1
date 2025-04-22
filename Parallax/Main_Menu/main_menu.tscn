@@ -37,25 +37,17 @@ offset_bottom = -4142.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_eno1g")
 
 [node name="Title Shadow" type="Label" parent="."]
-offset_left = 330.0
-offset_top = -4720.0
-offset_right = 909.0
-offset_bottom = -4623.0
+offset_left = 293.0
+offset_top = -4749.0
+offset_right = 929.0
+offset_bottom = -4609.0
 theme_override_colors/font_shadow_color = Color(0.724175, 0.1245, 0.83, 1)
 theme_override_constants/shadow_offset_x = 1
 theme_override_fonts/font = ExtResource("2_86ea6")
 theme_override_font_sizes/font_size = 72
-text = "Synthetic Awakening"
-
-[node name="Title" type="Label" parent="Title Shadow"]
-layout_mode = 0
-offset_right = 242.0
-offset_bottom = 41.0
-theme_override_colors/font_shadow_color = Color(0.1245, 0.206808, 0.83, 1)
-theme_override_constants/shadow_offset_x = -1
-theme_override_fonts/font = ExtResource("2_86ea6")
-theme_override_font_sizes/font_size = 72
-text = "Synthetic Awakening"
+text = "Parallax"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(566, -4466)
