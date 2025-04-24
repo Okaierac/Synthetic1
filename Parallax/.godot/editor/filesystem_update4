@@ -1,5 +1,6 @@
-res://Scenes/side_main.tscn
+res://Player/player_side.tscn
 res://Scenes/main.tscn
+res://Scenes/side_main.tscn
 res://Scenes/topdown_main.tscn
 res://Interaction components/interaction_component.tscn
 res://Player/player_topdown.tscn
@@ -9,5 +10,8 @@ res://Npcs/jeff.tscn
 res://Scenes/change_scene_item.tscn
 res://Main_Menu/main_menu.tscn
 res://Enemies and traps/penemy_fly.tscn
-res://Player/player_side.tscn
 res://Enemies and traps/penemy_knight.tscn
+res://Player/Scripts/player_side.gd
+res://Enemies and traps/penemy_knight.gd
+res://Player/hitbox.gd
+res://Player/hitbox_l.gd

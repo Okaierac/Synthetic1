@@ -1,15 +1,26 @@
 extends CharacterBody2D
 
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
+var hp = 5
 var speed = 300.0
 var player_detected = false
 var player_chase = false
-@onready var sprite_2d: Sprite2D = $Sprite2D
+
 signal damage
 
 func _on_penemy_fly_player_seen() -> void:
 	player_detected = true
 
 func _physics_process(delta: float) -> void:
+	
+	#health system
+	if hp == 0:
+		player_detected = false
+	elif hp < 0:
+		hp = 5
+		player_detected = true
+	
 	# Gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -30,3 +41,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	damage.emit()
+
+
+func _on_player_side_attack() -> void:
+	hp -= 1
+	print("Ouch!", hp)

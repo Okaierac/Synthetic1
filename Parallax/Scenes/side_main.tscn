@@ -344,5 +344,6 @@ position = Vector2(1377, 317835)
 [node name="Objective" parent="." instance=ExtResource("4_h60lv")]
 position = Vector2(3522, 318624)
 
+[connection signal="attack" from="Player_Side" to="Penemy_Knight" method="_on_player_side_attack"]
 [connection signal="player_seen" from="Penemy_Fly" to="Penemy_Knight" method="_on_penemy_fly_player_seen"]
 [connection signal="damage" from="Penemy_Knight" to="Player_Side" method="_on_penemy_knight_damage"]
