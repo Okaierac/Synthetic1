@@ -11,3 +11,7 @@ res://Main_Menu/main_menu.tscn
 res://Enemies and traps/penemy_fly.tscn
 res://Player/player_side.tscn
 res://Enemies and traps/penemy_knight.tscn
+res://Scenes/Game_Over.tscn
+res://Player/Scripts/player_side.gd
+res://Player/animated_sprite_2d.gd
+res://Scenes/game_over.gd

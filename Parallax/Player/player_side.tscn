@@ -295,3 +295,4 @@ animation = &"5"
 script = ExtResource("6_ica5r")
 
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
+[connection signal="Player_Died" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_player_died"]

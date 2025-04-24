@@ -1,6 +1,7 @@
 class_name player_side extends CharacterBody2D
 var hp = 5
 signal change_hp
+signal Switch_Scenes
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
@@ -50,3 +51,7 @@ func _process(delta: float) -> void:
 func _on_penemy_knight_damage() -> void:
 	hp -= 1
 	change_hp.emit()
+
+
+func _on_animated_sprite_2d_player_died() -> void:
+	Switch_Scenes.emit()
