@@ -1,4 +1,6 @@
 res://Scenes/side_main.tscn
+res://Player/animated_sprite_2d.gd
+res://Player/Scripts/player_side.gd
 res://Scenes/main.tscn
 res://Scenes/topdown_main.tscn
 res://Interaction components/interaction_component.tscn
@@ -12,6 +14,5 @@ res://Enemies and traps/penemy_fly.tscn
 res://Player/player_side.tscn
 res://Enemies and traps/penemy_knight.tscn
 res://Scenes/Game_Over.tscn
-res://Player/Scripts/player_side.gd
-res://Player/animated_sprite_2d.gd
+res://Scenes/animated_sprite_2d.gd
 res://Scenes/game_over.gd

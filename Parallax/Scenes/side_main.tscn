@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://db8pfunv7r7kj"]
+[gd_scene load_steps=9 format=3 uid="uid://db8pfunv7r7kj"]
 
 [ext_resource type="Texture2D" uid="uid://cv3qqolppobyk" path="res://Background/B_Placeholder/Green.png" id="1_3weou"]
 [ext_resource type="Texture2D" uid="uid://cnoop8yr1vx0o" path="res://Floor/Platformer/FP_Placeholder/Terrain (16x16).png" id="2_cds42"]
@@ -6,13 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://pwinn85rn4n0" path="res://Scenes/change_scene_item.tscn" id="4_h60lv"]
 [ext_resource type="PackedScene" uid="uid://gsnkh1mp864v" path="res://Enemies and traps/penemy_fly.tscn" id="5_a48we"]
 [ext_resource type="PackedScene" uid="uid://3ncxu4u8j7ps" path="res://Enemies and traps/penemy_knight.tscn" id="5_y2ymj"]
-
-[sub_resource type="GDScript" id="GDScript_8ls10"]
-script/source = "signal Game_Over
-
-func _on_player_side_switch_scenes() -> void:
-	Game_Over.emit()
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffd5v"]
 texture = ExtResource("2_cds42")
@@ -310,7 +303,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ffd5v")
 
 [node name="Side" type="Node"]
-script = SubResource("GDScript_8ls10")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -349,6 +341,5 @@ position = Vector2(1377, 317835)
 [node name="Objective" parent="." instance=ExtResource("4_h60lv")]
 position = Vector2(3522, 318624)
 
-[connection signal="Switch_Scenes" from="Player_Side" to="." method="_on_player_side_switch_scenes"]
 [connection signal="player_seen" from="Penemy_Fly" to="Penemy_Knight" method="_on_penemy_fly_player_seen"]
 [connection signal="damage" from="Penemy_Knight" to="Player_Side" method="_on_penemy_knight_damage"]

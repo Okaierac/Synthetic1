@@ -23,8 +23,7 @@ func _process(delta: float) -> void:
 	elif hp == 0:
 		animated_sprite_2d.animation = "0"
 		Player_Died.emit()
-	else:
-		hp = 5
+
 
 
 func _on_player_side_change_hp() -> void:
