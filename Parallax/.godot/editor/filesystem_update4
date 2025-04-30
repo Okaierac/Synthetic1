@@ -16,3 +16,4 @@ res://Enemies and traps/penemy_knight.tscn
 res://Scenes/Game_Over.tscn
 res://Scenes/animated_sprite_2d.gd
 res://Scenes/game_over.gd
+res://Main_Menu/main_menu.gd

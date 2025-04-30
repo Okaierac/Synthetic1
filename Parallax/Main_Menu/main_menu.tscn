@@ -71,7 +71,7 @@ action_mode = 0
 text = "Start
 "
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
+[node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_86ea6")
 theme_override_font_sizes/font_size = 66
@@ -80,7 +80,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ivq4r")
 text = "Settings
 "
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
+[node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_86ea6")
 theme_override_font_sizes/font_size = 66
@@ -90,3 +90,4 @@ text = "Exit
 "
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

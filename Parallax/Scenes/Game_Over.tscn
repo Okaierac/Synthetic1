@@ -51,7 +51,7 @@ position = Vector2(595.625, -8388.88)
 scale = Vector2(7.82167, 4.375)
 sprite_frames = SubResource("SpriteFrames_sn2vp")
 autoplay = "default"
-frame_progress = 0.724713
+frame_progress = 0.999546
 script = ExtResource("3_ccyv8")
 
 [node name="Play_again" type="Button" parent="."]
