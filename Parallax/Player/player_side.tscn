@@ -294,5 +294,15 @@ sprite_frames = SubResource("SpriteFrames_guth3")
 animation = &"5"
 script = ExtResource("6_ica5r")
 
+[node name="Dash_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Dash_cooldown" type="Timer" parent="."]
+wait_time = 20.0
+
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
+[connection signal="dash_again" from="." to="." method="_on_dash_again"]
 [connection signal="Player_Died" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_player_died"]
+[connection signal="timeout" from="Dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="ready" from="Dash_cooldown" to="." method="_on_dash_cooldown_ready"]
+[connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]

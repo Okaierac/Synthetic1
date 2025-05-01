@@ -1,3 +1,4 @@
+Timer
 Button
 Camera2D
 AnimatedSprite2D
@@ -11,5 +12,3 @@ Area2D
 CharacterBody2D
 AnimatableBody2D
 Container
-VBoxContainer
-VSeparator
