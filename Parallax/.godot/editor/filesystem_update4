@@ -1,7 +1,13 @@
-res://Main_Menu/main_menu.tscn
-res://Scenes/main.tscn
-res://Scenes/side_main.tscn
-res://Scenes/topdown_main.tscn
-res://Scenes/Game_Over.tscn
-res://Player/Scripts/player_side.gd
 res://Player/player_side.tscn
+res://Scenes/side_main.tscn
+res://Enemies and traps/portal.tscn
+res://Enemies and traps/Chest.gd
+res://Scenes/topdown_main.tscn
+res://Enemies and traps/Chest.tscn
+res://Scenes/main.tscn
+res://Main_Menu/main_menu.tscn
+res://Scenes/Game_Over.tscn
+res://Npcs/jeff.tscn
+res://Player/player_topdown.tscn
+res://Npcs/test_npc.tscn
+res://Enemies and traps/Chests.tscn

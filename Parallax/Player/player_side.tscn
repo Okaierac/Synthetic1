@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b5cihxyv02720" path="res://Player/Sprites/S_Placeholders/Idle (32x32).png" id="2_1t5hl"]
 [ext_resource type="Texture2D" uid="uid://ciivm7nt3fvir" path="res://Player/Sprites/S_Placeholders/Jump (32x32).png" id="3_g3p7t"]
 [ext_resource type="Texture2D" uid="uid://b8qoomrbdlvaj" path="res://Player/Sprites/S_Placeholders/Run (32x32).png" id="4_n2gwm"]
-[ext_resource type="Texture2D" uid="uid://b5pv1830u4jou" path="res://Items/Health/HP_spreadsheet.png" id="5_ssbcy"]
+[ext_resource type="Texture2D" uid="uid://b5pv1830u4jou" path="res://Chests/Items/Health/HP_spreadsheet.png" id="5_ssbcy"]
 [ext_resource type="Script" path="res://Player/animated_sprite_2d.gd" id="6_ica5r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tsns"]
