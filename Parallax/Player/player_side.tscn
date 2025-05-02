@@ -297,20 +297,24 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_1xprf")
 
 [node name="HitboxR" type="RayCast2D" parent="."]
-target_position = Vector2(35, 0)
+target_position = Vector2(70, 0)
 collision_mask = 4
 collide_with_areas = true
 collide_with_bodies = false
 script = ExtResource("7_4br4s")
 
 [node name="HitboxL" type="RayCast2D" parent="."]
-target_position = Vector2(-35, 0)
+target_position = Vector2(-70, 0)
 collision_mask = 4
 collide_with_areas = true
 collide_with_bodies = false
 script = ExtResource("8_qgw7u")
 
+[node name="AC" type="Timer" parent="."]
+wait_time = 0.25
+
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
 [connection signal="flipped" from="." to="HitboxR" method="_on_player_side_flipped"]
 [connection signal="enemy_detected_r" from="HitboxR" to="." method="_on_hitbox_r_enemy_detected_r"]
 [connection signal="enemy_detected_l" from="HitboxL" to="." method="_on_hitbox_l_enemy_detected_l"]
+[connection signal="timeout" from="AC" to="." method="_on_ac_timeout"]

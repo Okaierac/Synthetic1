@@ -1,7 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://3ncxu4u8j7ps"]
+[gd_scene load_steps=8 format=3 uid="uid://3ncxu4u8j7ps"]
 
 [ext_resource type="Script" path="res://Enemies and traps/penemy_knight.gd" id="1_b7jrj"]
 [ext_resource type="Texture2D" uid="uid://xludn5yth3fq" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png.png" id="2_hydni"]
+[ext_resource type="Texture2D" uid="uid://cadokbp2bk6jq" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png" id="3_j6k5f"]
+[ext_resource type="Texture2D" uid="uid://ctsouy0uhvbqv" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png" id="4_siery"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gb0ar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hydni")
+}],
+"loop": true,
+"name": &"alive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j6k5f")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_siery")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f40vi"]
 radius = 35.0
@@ -14,10 +43,10 @@ height = 56.0
 [node name="Penemy_Knight" type="CharacterBody2D"]
 script = ExtResource("1_b7jrj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(5.96046e-08, 2.38419e-07)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.294, 0.294)
-texture = ExtResource("2_hydni")
+sprite_frames = SubResource("SpriteFrames_gb0ar")
+animation = &"alive"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 6
@@ -30,4 +59,8 @@ shape = SubResource("CapsuleShape2D_f40vi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_gdagp")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
