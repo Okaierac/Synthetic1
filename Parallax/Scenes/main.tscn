@@ -11,4 +11,3 @@
 [node name="Top-Down" parent="." instance=ExtResource("2_0wi28")]
 
 [node name="Side" parent="." instance=ExtResource("1_varkt")]
-script = null

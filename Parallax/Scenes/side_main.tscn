@@ -6,8 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://pwinn85rn4n0" path="res://Scenes/change_scene_item.tscn" id="4_h60lv"]
 [ext_resource type="PackedScene" uid="uid://gsnkh1mp864v" path="res://Enemies and traps/penemy_fly.tscn" id="5_a48we"]
 [ext_resource type="PackedScene" uid="uid://3ncxu4u8j7ps" path="res://Enemies and traps/penemy_knight.tscn" id="5_y2ymj"]
-
-[sub_resource type="GDScript" id="GDScript_8ls10"]
+[ext_resource type="PackedScene" uid="uid://dm0rjfgb2ov0" path="res://Enemies and traps/Chests.tscn" id="8_fb7a4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffd5v"]
 texture = ExtResource("2_cds42")
@@ -305,7 +304,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ffd5v")
 
 [node name="Side" type="Node"]
-script = SubResource("GDScript_8ls10")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -336,10 +334,17 @@ position = Vector2(903, 318347)
 
 [node name="Penemy_Knight" parent="." instance=ExtResource("5_y2ymj")]
 position = Vector2(1377, 317835)
+collision_layer = 7
+collision_mask = 7
+
+[node name="Chest" parent="." instance=ExtResource("8_fb7a4")]
+position = Vector2(572, 318634)
+scale = Vector2(0.18, 0.18)
 
 [node name="Player_Side" parent="." instance=ExtResource("3_6mqgg")]
 position = Vector2(253, 318603)
 scale = Vector2(1.94888, 1.95387)
+collision_mask = 5
 
 [node name="Objective" parent="." instance=ExtResource("4_h60lv")]
 position = Vector2(3522, 318624)

@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Enemies and traps/penemy_knight.gd" id="1_b7jrj"]
 [ext_resource type="Texture2D" uid="uid://xludn5yth3fq" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png.png" id="2_hydni"]
-[ext_resource type="Texture2D" uid="uid://cadokbp2bk6jq" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png" id="3_j6k5f"]
-[ext_resource type="Texture2D" uid="uid://ctsouy0uhvbqv" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png" id="4_siery"]
+[ext_resource type="Texture2D" uid="uid://dte30ynxg823y" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png" id="3_k4tss"]
+[ext_resource type="Texture2D" uid="uid://cqoep2qp4p7nr" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png" id="4_xpyjy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gb0ar"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3h453"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -17,7 +17,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_j6k5f")
+"texture": ExtResource("3_k4tss")
 }],
 "loop": true,
 "name": &"dead",
@@ -25,7 +25,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_siery")
+"texture": ExtResource("4_xpyjy")
 }],
 "loop": true,
 "name": &"hurt",
@@ -45,7 +45,7 @@ script = ExtResource("1_b7jrj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.294, 0.294)
-sprite_frames = SubResource("SpriteFrames_gb0ar")
+sprite_frames = SubResource("SpriteFrames_3h453")
 animation = &"alive"
 
 [node name="Area2D" type="Area2D" parent="."]

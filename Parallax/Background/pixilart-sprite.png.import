@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtkthmyg2av76"
-path="res://.godot/imported/End (Idle).png-2d436d3c712f683ca7ca3dd2cd07092c.ctex"
+uid="uid://bfjwg257640et"
+path="res://.godot/imported/pixilart-sprite.png-eeb2b0e54549f5288d4dc4d90c5c8996.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/End (Idle).png"
-dest_files=["res://.godot/imported/End (Idle).png-2d436d3c712f683ca7ca3dd2cd07092c.ctex"]
+source_file="res://Background/pixilart-sprite.png"
+dest_files=["res://.godot/imported/pixilart-sprite.png-eeb2b0e54549f5288d4dc4d90c5c8996.ctex"]
 
 [params]
 
