@@ -10,6 +10,7 @@ var player_detected = false
 var player_chase = false
 
 signal damage
+signal killed
 
 func _ready():
 	animated_sprite_2d.animation = "alive"
@@ -23,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	if hp == 0:
 		player_detected = false
 		animated_sprite_2d.animation = "dead"
+		killed.emit()
 	elif hp < 0:
 		#hp = 5
 		#player_detected = true
@@ -59,3 +61,6 @@ func _on_player_side_attack() -> void:
 func _on_timer_timeout() -> void:
 	if hp > 0:
 		animated_sprite_2d.animation = "alive"
+
+func _on_killed() -> void:
+	queue_free()

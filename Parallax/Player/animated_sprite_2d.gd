@@ -1,8 +1,11 @@
 extends AnimatedSprite2D
 
-var hp = 5
+var hp = 10
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $"."
+
 signal Player_Died
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -10,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if hp == 5:
+	if hp >= 5:
 		animated_sprite_2d.animation = "5"
 	elif hp == 4:
 		animated_sprite_2d.animation = "4"

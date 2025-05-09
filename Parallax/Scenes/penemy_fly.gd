@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 const SPEED = 40
-var player_detected = false
 signal player_seen
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
