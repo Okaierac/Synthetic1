@@ -1,9 +1,10 @@
+AnimatedSprite2D
+Timer
+RayCast2D
 StaticBody2D
 Label
-AnimatedSprite2D
 AnimationPlayer
 Sprite2D
-Timer
 Button
 Camera2D
 CanvasLayer
@@ -11,5 +12,3 @@ Panel
 Node
 CollisionShape2D
 Area2D
-CharacterBody2D
-AnimatableBody2D

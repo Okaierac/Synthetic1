@@ -1,13 +1,21 @@
 class_name player_side extends CharacterBody2D
+
 var hp = 5
+var dashing = false
+var NO_cooldown = true
+var cooldown = true
+
 signal dash_again
 signal change_hp
+signal attack
+
 const Dash_speed = 20000
-var dashing = false
 const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
+
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
-var NO_cooldown = true
+@onready var ac: Timer = $AC
+
 
 
 func _physics_process(delta: float) -> void:
@@ -79,3 +87,23 @@ func _on_dash_again() -> void:
 
 func _on_dash_cooldown_timeout() -> void:
 	dash_again.emit()
+
+
+func _on_hitbox_r_enemy_detected_r() -> void:
+	ac.start()
+	if isFlipped == false:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack.emit()
+			cooldown = false
+
+
+func _on_hitbox_l_enemy_detected_l() -> void:
+	ac.start()
+	if isFlipped:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack.emit()
+			cooldown = false
+
+
+func _on_ac_timeout() -> void:
+	cooldown = true
