@@ -1,15 +1,16 @@
-res://Enemies and traps/Chests.tscn
-res://Player/Scripts/player_side.gd
-res://Player/player_side.tscn
-res://Player/hitbox_l.gd
-res://Player/hitbox_r.gd
 res://Enemies and traps/penemy_knight.tscn
-res://Enemies and traps/penemy_knight.gd
 res://Scenes/main.tscn
 res://Scenes/side_main.tscn
 res://Scenes/topdown_main.tscn
 res://Main_Menu/main_menu.tscn
 res://Scenes/Game_Over.tscn
+res://Player/player_side.tscn
 res://Npcs/jeff.tscn
 res://Player/player_topdown.tscn
 res://Npcs/test_npc.tscn
+res://Enemies and traps/Chests.tscn
+res://Enemies and traps/Chest.gd
+res://Enemies and traps/penemy_knight.gd
+res://Global_Var.gd
+res://Chests/character_Chest.tscn
+res://Scenes/change_scene_item.tscn

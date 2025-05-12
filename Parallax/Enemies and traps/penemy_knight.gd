@@ -4,12 +4,14 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
 
-var hp = 5
+var hp = 1
 var speed = 300.0
 var player_detected = false
 var player_chase = false
 
 signal damage
+signal killed
+signal dead
 
 func _ready():
 	animated_sprite_2d.animation = "alive"
@@ -23,6 +25,7 @@ func _physics_process(delta: float) -> void:
 	if hp == 0:
 		player_detected = false
 		animated_sprite_2d.animation = "dead"
+		killed.emit()
 	elif hp < 0:
 		#hp = 5
 		#player_detected = true
@@ -59,3 +62,11 @@ func _on_player_side_attack() -> void:
 func _on_timer_timeout() -> void:
 	if hp > 0:
 		animated_sprite_2d.animation = "alive"
+
+
+func _on_killed() -> void:
+	print("Enemy died at ", global_position)  # Debug print to check the location
+	GlobalVar.enemy_location = global_position  # Store the enemy's position
+	dead.emit()
+	print(GlobalVar.enemy_location)
+	queue_free() 

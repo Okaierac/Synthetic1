@@ -1,46 +1,45 @@
-[gd_scene load_steps=16 format=3 uid="uid://dm0rjfgb2ov0"]
+[gd_scene load_steps=15 format=3 uid="uid://dmfayltc3nlo6"]
 
-[ext_resource type="Script" path="res://Enemies and traps/Chest.gd" id="1_01ygh"]
-[ext_resource type="Texture2D" uid="uid://627lavgk6ioc" path="res://Chests/Chests.png" id="1_jyqjd"]
-[ext_resource type="PackedScene" uid="uid://b0iu14qigxbj5" path="res://Interaction components/interactable.tscn" id="2_qg7fh"]
+[ext_resource type="Texture2D" uid="uid://627lavgk6ioc" path="res://Chests/Chests.png" id="1_36o2m"]
+[ext_resource type="PackedScene" uid="uid://b0iu14qigxbj5" path="res://Interaction components/interactable.tscn" id="2_p6gj2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_er6wy"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(0, 0, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmc8f"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(0, 0, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sv1xf"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(350, 0, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c1w6v"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(0, 700, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aysaw"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(350, 700, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4817j"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(0, 700, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iq3nj"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(0, 350, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4absv"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(0, 350, 350, 350)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ou2rs"]
-atlas = ExtResource("1_jyqjd")
+atlas = ExtResource("1_36o2m")
 region = Rect2(350, 350, 350, 350)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_e2epw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0dc66"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -100,29 +99,29 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fowph"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_quejw"]
 size = Vector2(257, 185)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgpqb"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghlof"]
 size = Vector2(278, 201)
 
-[node name="StaticBody2D" type="StaticBody2D"]
-script = ExtResource("1_01ygh")
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(476, 334)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_e2epw")
+sprite_frames = SubResource("SpriteFrames_0dc66")
 animation = &"Rare_Open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-15.5, 39.5)
 scale = Vector2(1.07408, 1.06663)
-shape = SubResource("RectangleShape2D_fowph")
+shape = SubResource("RectangleShape2D_quejw")
 
-[node name="Interactable" parent="." instance=ExtResource("2_qg7fh")]
+[node name="Interactable" parent="." instance=ExtResource("2_p6gj2")]
 priority = 1
 interact_name = "press e to Open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 position = Vector2(-15, 37.5)
 scale = Vector2(1.11926, 1.07598)
-shape = SubResource("RectangleShape2D_wgpqb")
+shape = SubResource("RectangleShape2D_ghlof")
