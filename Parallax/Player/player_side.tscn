@@ -276,7 +276,8 @@ radius = 11.0
 height = 28.0
 
 [node name="Player_Side" type="CharacterBody2D" groups=["player_side"]]
-collision_layer = 3
+collision_layer = 131
+collision_mask = 129
 script = ExtResource("1_nwayo")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -323,6 +324,9 @@ wait_time = 0.25
 [node name="InteractionComponent" parent="." instance=ExtResource("9_yhub3")]
 position = Vector2(1, 2)
 
+[node name="Damage" type="Timer" parent="."]
+wait_time = 0.3
+
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
 [connection signal="dash_again" from="." to="." method="_on_dash_again"]
 [connection signal="Player_Died" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_player_died"]
@@ -332,3 +336,4 @@ position = Vector2(1, 2)
 [connection signal="enemy_detected_r" from="HitboxR" to="." method="_on_hitbox_r_enemy_detected_r"]
 [connection signal="enemy_detected_l" from="HitboxL" to="." method="_on_hitbox_l_enemy_detected_l"]
 [connection signal="timeout" from="AC" to="." method="_on_ac_timeout"]
+[connection signal="timeout" from="Damage" to="." method="_on_damage_timeout"]

@@ -4,10 +4,12 @@ var hp = 5
 var dashing = false
 var NO_cooldown = true
 var cooldown = true
+var damage_cool = false
 
 signal dash_again
 signal change_hp
 signal attack
+signal attack2
 
 const Dash_speed = 20000
 const SPEED = 400.0
@@ -15,7 +17,7 @@ const JUMP_VELOCITY = -900.0
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var ac: Timer = $AC
-
+@onready var damage: Timer = $Damage
 
 
 func _physics_process(delta: float) -> void:
@@ -70,8 +72,11 @@ func _process(delta: float) -> void:
 
 
 func _on_penemy_knight_damage() -> void:
-	hp -= 1
-	change_hp.emit()
+	if damage_cool == false:
+		hp -= 1
+		change_hp.emit()
+		damage_cool = true
+	damage.start()
 
 
 func _on_animated_sprite_2d_player_died() -> void:
@@ -94,6 +99,7 @@ func _on_hitbox_r_enemy_detected_r() -> void:
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
 			attack.emit()
+			attack2.emit()
 			cooldown = false
 
 
@@ -102,8 +108,21 @@ func _on_hitbox_l_enemy_detected_l() -> void:
 	if isFlipped:
 		if Input.is_action_just_pressed("attack") and cooldown:
 			attack.emit()
+			attack2.emit()
 			cooldown = false
 
 
 func _on_ac_timeout() -> void:
 	cooldown = true
+
+
+func _on_damage_timeout() -> void:
+	damage_cool = false
+
+
+func _on_penemy_knight_2_damage_2() -> void:
+	if damage_cool == false:
+		hp -= 1
+		change_hp.emit()
+		damage_cool = true
+	damage.start()

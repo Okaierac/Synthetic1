@@ -1,7 +1,5 @@
-res://Enemies and traps/penemy_knight.gd
-res://Enemies and traps/penemy_knight.tscn
-res://Scenes/main.tscn
 res://Scenes/side_main.tscn
+res://Scenes/main.tscn
 res://Scenes/topdown_main.tscn
 res://Main_Menu/main_menu.tscn
 res://Scenes/Game_Over.tscn
@@ -10,7 +8,11 @@ res://Npcs/jeff.tscn
 res://Player/player_topdown.tscn
 res://Npcs/test_npc.tscn
 res://Enemies and traps/Chests.tscn
-res://Scenes/penemy_fly.gd
+res://Enemies and traps/penemy_knight.tscn
 res://Enemies and traps/penemy_fly.tscn
-res://Main_Menu/main_menu.gd
-res://Player/animated_sprite_2d.gd
+res://Enemies and traps/penemy_knight.gd
+res://Player/Scripts/player_side.gd
+res://Scenes/static_body_2d.tscn
+res://Chests/Items/Change_Scene_(Item).gd
+res://Enemies and traps/penemy_knight2.gd
+res://Player/hitbox_r.gd

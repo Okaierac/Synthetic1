@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0341i3pbuh4c"]
+
+[ext_resource type="Script" path="res://Chests/Items/Change_Scene_(Item).gd" id="1_daue2"]
+[ext_resource type="Texture2D" uid="uid://dtkthmyg2av76" path="res://Chests/Items/End (Idle).png" id="2_3kdf1"]
+[ext_resource type="PackedScene" uid="uid://b0iu14qigxbj5" path="res://Interaction components/interactable.tscn" id="3_wwxaj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_71776"]
+radius = 25.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktguy"]
+size = Vector2(201.541, 149.757)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_daue2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_3kdf1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_71776")
+
+[node name="Interactable" parent="." instance=ExtResource("3_wwxaj")]
+position = Vector2(0, 7)
+priority = 1
+interact_name = "press e to Leave"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(0, -7)
+scale = Vector2(1.11926, 1.07598)
+shape = SubResource("RectangleShape2D_ktguy")

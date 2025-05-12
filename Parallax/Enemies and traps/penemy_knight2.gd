@@ -9,8 +9,8 @@ var speed = 300.0
 var player_detected = false
 var player_chase = false
 
-signal damage
-signal killed
+signal damage2
+signal killed2
 
 func _ready():
 	animated_sprite_2d.animation = "alive"
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 	if hp == 0:
 		player_detected = false
 		animated_sprite_2d.animation = "dead"
-		killed.emit()
+		killed2.emit()
 	elif hp < 0:
 		#hp = 5
 		#player_detected = true
@@ -49,13 +49,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	damage.emit()
-
-
-func _on_player_side_attack() -> void:
-	hp -= 1
-	animated_sprite_2d.animation = "hurt"
-	timer.start()
+	damage2.emit()
 
 
 func _on_timer_timeout() -> void:
@@ -66,5 +60,7 @@ func _on_killed() -> void:
 	queue_free()
 
 
-func _on_penemy_knight_2_killed_2() -> void:
-	pass # Replace with function body.
+func _on_player_side_attack_2() -> void:
+	hp -= 1
+	animated_sprite_2d.animation = "hurt"
+	timer.start()
