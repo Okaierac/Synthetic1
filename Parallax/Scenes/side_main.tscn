@@ -347,7 +347,7 @@ collision_mask = 5
 position = Vector2(3522, 318624)
 
 [node name="Chest" parent="." instance=ExtResource("7_dn1dl")]
-position = Vector2(1413, 318611)
+position = Vector2(1413, 317364)
 scale = Vector2(0.25, 0.25)
 script = ExtResource("8_clv2g")
 
@@ -356,3 +356,6 @@ script = ExtResource("8_clv2g")
 [connection signal="killed" from="Penemy_Knight" to="Penemy_Knight" method="_on_killed"]
 [connection signal="killed" from="Penemy_Knight" to="Chest" method="_on_penemy_knight_killed"]
 [connection signal="attack" from="Player_Side" to="Penemy_Knight" method="_on_player_side_attack"]
+[connection signal="common" from="Chest" to="Player_Side" method="_on_chest_common"]
+[connection signal="legendary" from="Chest" to="Player_Side" method="_on_chest_legendary"]
+[connection signal="rare" from="Chest" to="Player_Side" method="_on_chest_rare"]

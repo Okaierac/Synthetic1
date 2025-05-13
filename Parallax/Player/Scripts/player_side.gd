@@ -107,3 +107,15 @@ func _on_hitbox_l_enemy_detected_l() -> void:
 
 func _on_ac_timeout() -> void:
 	cooldown = true
+
+
+func _on_chest_common() -> void:
+	GlobalVar.Coins += randi_range(1, 3)
+
+
+func _on_chest_legendary() -> void:
+	GlobalVar.Coins += randi_range(7, 15)
+
+
+func _on_chest_rare() -> void:
+	GlobalVar.Coins += randi_range(4, 10)

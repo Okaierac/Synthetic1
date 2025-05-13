@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d0g482o7qfegi"]
+[gd_scene load_steps=46 format=3 uid="uid://d0g482o7qfegi"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player_side.gd" id="1_nwayo"]
 [ext_resource type="Texture2D" uid="uid://b5cihxyv02720" path="res://Player/Sprites/S_Placeholders/Idle (32x32).png" id="2_1t5hl"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://Player/hitbox_r.gd" id="7_oee3r"]
 [ext_resource type="Script" path="res://Player/hitbox_l.gd" id="8_b6ovo"]
 [ext_resource type="PackedScene" uid="uid://c7y4vl1gwhaga" path="res://Interaction components/interaction_component.tscn" id="9_nl1vu"]
+[ext_resource type="Texture2D" uid="uid://dhnm0w4u8ue1e" path="res://Chests/Items/Coin/Coin Icon.png" id="10_upylo"]
+[ext_resource type="Script" path="res://Player/Coin_Count.gd" id="11_dogjd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qfv0"]
 atlas = ExtResource("5_ssbcy")
@@ -275,6 +277,12 @@ animations = [{
 radius = 11.0
 height = 28.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_laexq"]
+font_size = 100
+font_color = Color(0.178, 0.09, 0.75, 1)
+outline_size = 15
+shadow_size = 15
+
 [node name="Player_Side" type="CharacterBody2D" groups=["player_side"]]
 collision_layer = 3
 script = ExtResource("1_nwayo")
@@ -282,7 +290,7 @@ script = ExtResource("1_nwayo")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-229, -134)
+position = Vector2(-229, -87)
 sprite_frames = SubResource("SpriteFrames_guth3")
 animation = &"5"
 script = ExtResource("6_ica5r")
@@ -322,6 +330,22 @@ wait_time = 0.25
 
 [node name="InteractionComponent" parent="." instance=ExtResource("9_nl1vu")]
 position = Vector2(1, 2)
+
+[node name="Coins" type="Sprite2D" parent="."]
+position = Vector2(-262, -134)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("10_upylo")
+
+[node name="Label" type="Label" parent="Coins"]
+offset_left = 125.0
+offset_top = -100.0
+offset_right = 438.0
+offset_bottom = 92.0
+text = "
+"
+label_settings = SubResource("LabelSettings_laexq")
+script = ExtResource("11_dogjd")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
 [connection signal="dash_again" from="." to="." method="_on_dash_again"]

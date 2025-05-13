@@ -110,7 +110,7 @@ position = Vector2(476, 334)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0dc66")
-animation = &"Rare_Open"
+animation = &"Legendary_Closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-15.5, 39.5)

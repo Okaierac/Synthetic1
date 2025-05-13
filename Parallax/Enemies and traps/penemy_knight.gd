@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var timer: Timer = $Timer
 
-var hp = 1
+var hp = 5
 var speed = 300.0
 var player_detected = false
 var player_chase = false
