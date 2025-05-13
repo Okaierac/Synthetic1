@@ -8,6 +8,7 @@ var hp = 5
 var speed = 300.0
 var player_detected = false
 var player_chase = false
+var on_action = false
 
 signal damage
 signal killed
@@ -16,6 +17,9 @@ func _ready():
 	animated_sprite_2d.animation = "alive"
 
 func _on_penemy_fly_player_seen() -> void:
+	if not on_action:
+		position = Vector2(2450, 318500)
+		on_action = true
 	player_detected = true
 
 func _physics_process(delta: float) -> void:
@@ -64,7 +68,3 @@ func _on_timer_timeout() -> void:
 
 func _on_killed() -> void:
 	queue_free()
-
-
-func _on_penemy_knight_2_killed_2() -> void:
-	pass # Replace with function body.

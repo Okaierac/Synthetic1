@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0f0i3a3hcffv"]
+
+[ext_resource type="Texture2D" uid="uid://xludn5yth3fq" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png.png" id="1_axy7m"]
+[ext_resource type="Script" path="res://Enemies and traps/penemy_knight2.gd" id="1_u25lf"]
+[ext_resource type="Texture2D" uid="uid://dte30ynxg823y" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png" id="2_qyp0e"]
+[ext_resource type="Texture2D" uid="uid://cqoep2qp4p7nr" path="res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png" id="3_tbuf3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_biarw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_axy7m")
+}],
+"loop": true,
+"name": &"alive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qyp0e")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tbuf3")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_isle5"]
+radius = 35.0
+height = 78.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agb5q"]
+radius = 20.0
+height = 56.0
+
+[node name="Penemy_Knight2" type="CharacterBody2D"]
+script = ExtResource("1_u25lf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.294, 0.294)
+sprite_frames = SubResource("SpriteFrames_biarw")
+animation = &"alive"
+
+[node name="HitboxKnight2" type="Area2D" parent="."]
+collision_layer = 6
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxKnight2"]
+position = Vector2(-2, -1)
+shape = SubResource("CapsuleShape2D_isle5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_agb5q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="killed2" from="." to="." method="_on_killed_2"]
+[connection signal="body_entered" from="HitboxKnight2" to="." method="_on_hitbox_knight_2_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

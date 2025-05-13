@@ -1,6 +1,7 @@
+Area2D
+CharacterBody2D
 StaticBody2D
 Timer
-Area2D
 RayCast2D
 AnimatedSprite2D
 Label
@@ -11,4 +12,3 @@ Camera2D
 CanvasLayer
 Panel
 Node
-CollisionShape2D

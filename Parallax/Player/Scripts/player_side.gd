@@ -93,25 +93,6 @@ func _on_dash_again() -> void:
 func _on_dash_cooldown_timeout() -> void:
 	dash_again.emit()
 
-
-func _on_hitbox_r_enemy_detected_r() -> void:
-	ac.start()
-	if isFlipped == false:
-		if Input.is_action_just_pressed("attack") and cooldown:
-			attack.emit()
-			attack2.emit()
-			cooldown = false
-
-
-func _on_hitbox_l_enemy_detected_l() -> void:
-	ac.start()
-	if isFlipped:
-		if Input.is_action_just_pressed("attack") and cooldown:
-			attack.emit()
-			attack2.emit()
-			cooldown = false
-
-
 func _on_ac_timeout() -> void:
 	cooldown = true
 
@@ -126,3 +107,35 @@ func _on_penemy_knight_2_damage_2() -> void:
 		change_hp.emit()
 		damage_cool = true
 	damage.start()
+
+
+func _on_hitbox_l_enemy_1_detected_l() -> void:
+	ac.start()
+	if isFlipped:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack.emit()
+			cooldown = false
+
+
+func _on_hitbox_l_enemy_2_detected_l() -> void:
+	ac.start()
+	if isFlipped:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack2.emit()
+			cooldown = false
+
+
+func _on_hitbox_r_enemy_1_detected_r() -> void:
+	ac.start()
+	if isFlipped == false:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack.emit()
+			cooldown = false
+
+
+func _on_hitbox_r_enemy_2_detected_r() -> void:
+	ac.start()
+	if isFlipped == false:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack2.emit()
+			cooldown = false
