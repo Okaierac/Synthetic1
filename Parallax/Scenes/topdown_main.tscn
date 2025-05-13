@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d4e4m8lv0gk1h" path="res://Npcs/jeff.tscn" id="4_451fj"]
 
 [node name="Top-Down" type="Node"]
+metadata/_edit_vertical_guides_ = [-227.0]
+metadata/_edit_horizontal_guides_ = [-133.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
