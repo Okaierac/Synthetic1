@@ -12,6 +12,7 @@ var on_action = false
 
 signal damage
 signal killed
+signal dead
 
 func _ready():
 	animated_sprite_2d.animation = "alive"
@@ -67,4 +68,8 @@ func _on_timer_timeout() -> void:
 		animated_sprite_2d.animation = "alive"
 
 func _on_killed() -> void:
-	queue_free()
+	print("Enemy1 died at ", global_position)  # Debug print to check the location
+	GlobalVar.enemy_location = global_position  # Store the enemy's position
+	dead.emit()
+	print(GlobalVar.enemy_location)
+	queue_free() 

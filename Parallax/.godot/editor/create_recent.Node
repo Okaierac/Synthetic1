@@ -1,12 +1,12 @@
-Area2D
 CharacterBody2D
+Label
+Sprite2D
+Area2D
 StaticBody2D
 Timer
 RayCast2D
 AnimatedSprite2D
-Label
 AnimationPlayer
-Sprite2D
 Button
 Camera2D
 CanvasLayer

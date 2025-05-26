@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://gsnkh1mp864v" path="res://Enemies and traps/penemy_fly.tscn" id="5_a48we"]
 [ext_resource type="PackedScene" uid="uid://3ncxu4u8j7ps" path="res://Enemies and traps/penemy_knight.tscn" id="5_y2ymj"]
 [ext_resource type="PackedScene" uid="uid://c0341i3pbuh4c" path="res://Scenes/static_body_2d.tscn" id="7_7bkn6"]
-[ext_resource type="PackedScene" uid="uid://dm0rjfgb2ov0" path="res://Enemies and traps/Chests.tscn" id="8_fb7a4"]
+[ext_resource type="PackedScene" uid="uid://b0lkv7ias55sf" path="res://CHest.tscn" id="8_5uqfc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ffd5v"]
 texture = ExtResource("2_cds42")
@@ -348,18 +348,18 @@ position = Vector2(253, 318603)
 scale = Vector2(1.94888, 1.95387)
 collision_mask = 5
 
-[node name="Chest" parent="." instance=ExtResource("8_fb7a4")]
-position = Vector2(572, 318634)
-scale = Vector2(0.18, 0.18)
-
-[node name="StaticBody2D" parent="." instance=ExtResource("7_7bkn6")]
+[node name="Goal" parent="." instance=ExtResource("7_7bkn6")]
 position = Vector2(5231, 319388)
+
+[node name="Chest" parent="." instance=ExtResource("8_5uqfc")]
+scale = Vector2(0.3, 0.3)
 
 [connection signal="player_seen" from="Penemy_Fly" to="Penemy_Knight" method="_on_penemy_fly_player_seen"]
 [connection signal="player_seen" from="Penemy_Fly" to="Penemy_Knight2" method="_on_penemy_fly_player_seen"]
 [connection signal="damage" from="Penemy_Knight" to="Player_Side" method="_on_penemy_knight_damage"]
-[connection signal="killed" from="Penemy_Knight" to="StaticBody2D" method="_on_penemy_knight_killed"]
+[connection signal="dead" from="Penemy_Knight" to="Chest" method="_on_penemy_knight_dead"]
+[connection signal="killed" from="Penemy_Knight" to="Goal" method="_on_penemy_knight_killed"]
 [connection signal="damage2" from="Penemy_Knight2" to="Player_Side" method="_on_penemy_knight_2_damage_2"]
-[connection signal="killed2" from="Penemy_Knight2" to="StaticBody2D" method="_on_penemy_knight_2_killed_2"]
+[connection signal="killed2" from="Penemy_Knight2" to="Goal" method="_on_penemy_knight_2_killed_2"]
 [connection signal="attack" from="Player_Side" to="Penemy_Knight" method="_on_player_side_attack"]
 [connection signal="attack2" from="Player_Side" to="Penemy_Knight2" method="_on_player_side_attack_2"]

@@ -1,3 +1,5 @@
+res://
+res://Chests/Items/Coin
 res://Enemies/Penemies
 res://Scenes
 res://Side Characters/Sprites
@@ -6,7 +8,6 @@ res://Chests
 res://Background
 res://Fonts/Glitch Font
 res://Main_Menu
-res://
 res://Npcs
 res://Player/Sprites/S_Placeholders
 res://Interaction components

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://d0g482o7qfegi"]
+[gd_scene load_steps=45 format=3 uid="uid://d0g482o7qfegi"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player_side.gd" id="1_nwayo"]
 [ext_resource type="Texture2D" uid="uid://b5cihxyv02720" path="res://Player/Sprites/S_Placeholders/Idle (32x32).png" id="2_1t5hl"]
@@ -9,6 +9,8 @@
 [ext_resource type="Script" path="res://Player/hitbox_r.gd" id="7_oee3r"]
 [ext_resource type="Script" path="res://Player/hitbox_l.gd" id="8_b6ovo"]
 [ext_resource type="PackedScene" uid="uid://c7y4vl1gwhaga" path="res://Interaction components/interaction_component.tscn" id="9_yhub3"]
+[ext_resource type="Texture2D" uid="uid://dhnm0w4u8ue1e" path="res://Chests/Items/Coin/Coin Icon.png" id="10_qvnvs"]
+[ext_resource type="Script" path="res://Player/Coin_display.gd" id="11_00o70"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qfv0"]
 atlas = ExtResource("5_ssbcy")
@@ -283,7 +285,7 @@ script = ExtResource("1_nwayo")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-229, -134)
+position = Vector2(-229, -97.875)
 sprite_frames = SubResource("SpriteFrames_guth3")
 animation = &"5"
 script = ExtResource("6_ica5r")
@@ -326,6 +328,19 @@ position = Vector2(1, 2)
 
 [node name="Damage" type="Timer" parent="."]
 wait_time = 0.3
+
+[node name="Coins" type="Sprite2D" parent="."]
+position = Vector2(-259, -137.875)
+scale = Vector2(0.125556, 0.125556)
+texture = ExtResource("10_qvnvs")
+
+[node name="Label" type="Label" parent="Coins"]
+offset_left = 119.0
+offset_top = -80.0
+offset_right = 382.0
+offset_bottom = 103.0
+script = ExtResource("11_00o70")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
 [connection signal="dash_again" from="." to="." method="_on_dash_again"]
