@@ -285,7 +285,8 @@ script = ExtResource("1_nwayo")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-229, -97.875)
+position = Vector2(-232, -125.75)
+scale = Vector2(0.96, 1.06)
 sprite_frames = SubResource("SpriteFrames_guth3")
 animation = &"5"
 script = ExtResource("6_ica5r")
@@ -330,15 +331,16 @@ position = Vector2(1, 2)
 wait_time = 0.3
 
 [node name="Coins" type="Sprite2D" parent="."]
-position = Vector2(-259, -137.875)
+position = Vector2(267, -136)
 scale = Vector2(0.125556, 0.125556)
 texture = ExtResource("10_qvnvs")
 
 [node name="Label" type="Label" parent="Coins"]
-offset_left = 119.0
-offset_top = -80.0
-offset_right = 382.0
-offset_bottom = 103.0
+offset_left = -422.122
+offset_top = -87.6102
+offset_right = -159.122
+offset_bottom = 95.3898
+theme_override_font_sizes/font_size = 70
 script = ExtResource("11_00o70")
 metadata/_edit_use_anchors_ = true
 

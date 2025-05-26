@@ -12,7 +12,6 @@ var on_action = false
 
 signal damage2
 signal killed2
-signal dead2
 
 func _ready():
 	animated_sprite_2d.animation = "alive"
@@ -64,8 +63,8 @@ func _on_player_side_attack_2() -> void:
 	timer.start()
 
 
-func _on_killed2() -> void:
-	queue_free() 
+func _on_killed_2() -> void:
+	queue_free()
 
 
 func _on_player_side_attack() -> void:
