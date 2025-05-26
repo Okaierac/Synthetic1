@@ -1,15 +1,15 @@
 ~ start
 Wizard: [[Hi|Hello|Sup]]
-Wizard: Would you be able to help me.
-- Yes
-	MC: Yes.
-	Wizard: thank you so much
-	Wizard: you will go to the great beyond
-	Go to find Jeff he will help you
-- NO
-	MC: NO!!!! => END
-- End the conversation => END
+Wizard: Would you be able to help me?
+- Yes. => yes
+- No.
+	MC: NO!!
+- End the conversation.
+=> END
 
-
-
+~ yes
+MC: Yes.
+Wizard: Thank you so much
+Wizard: You will go great and beyond
+Go to Jeff he will help you
 => END
