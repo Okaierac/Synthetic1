@@ -1,5 +1,6 @@
 class_name player_topdown extends CharacterBody2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 var move_speed : float = 400.0
 var isFlipped = false  # Keep track of the flip state
@@ -23,14 +24,19 @@ func _process( delta ):
 	
 
 	if Input.is_action_just_pressed("left") and not isFlipped:
-		sprite_2d.flip_h = true  # Flip the sprite when left arrow is pressed
+		animated_sprite_2d.flip_h = true  # Flip the sprite when left arrow is pressed
 		isFlipped = true  # Set the flip state to true
 
 	if Input.is_action_just_pressed("right") and isFlipped:
-		sprite_2d.flip_h = false  # Unflip the sprite when right arrow is pressed
+		animated_sprite_2d.flip_h = false  # Unflip the sprite when right arrow is pressed
 		isFlipped = false  # Set the flip state to false
 
 
 
 func _physics_process( delta ):
 	move_and_slide()
+	
+	if abs(velocity.x) or abs(velocity.y) > 1:
+		animated_sprite_2d.animation = "running"
+	else:
+		animated_sprite_2d.animation = "default"

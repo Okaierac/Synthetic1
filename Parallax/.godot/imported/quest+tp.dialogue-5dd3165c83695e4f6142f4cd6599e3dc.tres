@@ -1,12 +1,13 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d50cn"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rpejs"]
 
 [resource]
-script = ExtResource("1_d50cn")
+script = ExtResource("1_rpejs")
 using_states = PackedStringArray()
 titles = {
-"start": "1"
+"start": "1",
+"yes": "10"
 }
 character_names = PackedStringArray("Wizard", "MC")
 first_title = "0"
@@ -24,15 +25,31 @@ lines = {
 "type": "dialogue"
 },
 "10": {
+"character": "MC",
 "id": "10",
-"next_id": "end",
-"text": "End the conversation",
-"type": "response"
+"next_id": "11",
+"text": "Yes.",
+"type": "dialogue"
 },
 "11": {
+"character": "Wizard",
 "id": "11",
+"next_id": "12",
+"text": "Thank you so much",
+"type": "dialogue"
+},
+"12": {
+"character": "Wizard",
+"id": "12",
+"next_id": "13",
+"text": "You will go great and beyond",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
 "next_id": "14",
-"type": ""
+"text": "Go to Jeff he will help you",
+"type": "dialogue"
 },
 "14": {
 "id": "14",
@@ -43,6 +60,11 @@ lines = {
 },
 "15": {
 "id": "15",
+"next_id": "16",
+"type": ""
+},
+"16": {
+"id": "16",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
@@ -52,70 +74,67 @@ lines = {
 "character": "Wizard",
 "id": "2",
 "next_id": "3",
-"text": "Would you be able to help me.",
+"text": "Would you be able to help me?",
 "type": "dialogue"
 },
 "3": {
 "id": "3",
-"next_id": "4",
-"responses": PackedStringArray("3", "8", "10"),
-"text": "Yes",
+"next_id": "10",
+"responses": PackedStringArray("3", "4", "6"),
+"text": "Yes.",
 "type": "response"
 },
 "4": {
-"character": "MC",
 "id": "4",
 "next_id": "5",
-"text": "Yes.",
-"type": "dialogue"
+"text": "No.",
+"type": "response"
 },
 "5": {
-"character": "Wizard",
+"character": "MC",
 "id": "5",
-"next_id": "6",
-"text": "thank you so much",
+"next_id": "7",
+"text": "NO!!",
 "type": "dialogue"
 },
 "6": {
-"character": "Wizard",
 "id": "6",
 "next_id": "7",
-"text": "you will go to the great beyond",
-"type": "dialogue"
+"text": "End the conversation.",
+"type": "response"
 },
 "7": {
 "id": "7",
-"next_id": "14",
-"text": "Go to find Jeff he will help you",
-"type": "dialogue"
+"is_snippet": false,
+"next_id": "end",
+"next_id_after": "",
+"type": "goto"
 },
 "8": {
 "id": "8",
 "next_id": "9",
-"text": "NO",
-"type": "response"
+"type": ""
 },
 "9": {
-"character": "MC",
 "id": "9",
-"next_id": "end",
-"text": "NO!!!!",
-"type": "dialogue"
+"next_id": "10",
+"type": "title"
 }
 }
 raw_text = "~ start
 Wizard: [[Hi|Hello|Sup]]
-Wizard: Would you be able to help me.
-- Yes
-	MC: Yes.
-	Wizard: thank you so much
-	Wizard: you will go to the great beyond
-	Go to find Jeff he will help you
-- NO
-	MC: NO!!!! => END
-- End the conversation => END
+Wizard: Would you be able to help me?
+- Yes. => yes
+- No.
+	MC: NO!!
+- End the conversation.
+=> END
 
-
-
-=> END"
+~ yes
+MC: Yes.
+Wizard: Thank you so much
+Wizard: You will go great and beyond
+Go to Jeff he will help you
+=> END
+"
 metadata/dialogue_manager_version = "3.3.2"

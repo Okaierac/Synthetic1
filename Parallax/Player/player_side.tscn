@@ -294,8 +294,8 @@ script = ExtResource("6_ica5r")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jluqp")
+animation = &"running"
 autoplay = "default"
-frame_progress = 0.170342
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
