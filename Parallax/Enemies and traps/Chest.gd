@@ -56,3 +56,15 @@ func _on_penemy_knight_damage() -> void:
 func _on_penemy_knight_dead() -> void:
 	print("Teleporting chest to ", GlobalVar.enemy_location)  # Debugging print
 	position = GlobalVar.enemy_location  # Teleport instantly
+
+
+func _on_common() -> void:
+	GlobalVar.Coins += randi_range(1, 3)
+
+
+func _on_legendary() -> void:
+	GlobalVar.Coins += randi_range(5, 8)
+
+
+func _on_rare() -> void:
+	GlobalVar.Coins += randi_range(2, 6)

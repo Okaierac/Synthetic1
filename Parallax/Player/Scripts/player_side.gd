@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * Dash_speed
 			dashing = false
 			$Dash_cooldown.start()
+			GlobalVar.cooldown_bar = true
 			NO_cooldown = false
 		else:
 			velocity.x = direction * SPEED
