@@ -103,6 +103,7 @@ script = ExtResource("1_fx31q")
 modulate = Color(1, 0.0117156, 0.487251, 1)
 sprite_frames = SubResource("SpriteFrames_htcnq")
 frame_progress = 0.788412
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)

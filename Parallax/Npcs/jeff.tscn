@@ -102,6 +102,7 @@ script = ExtResource("1_db3i1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0.658102, 0.427845, 1)
 sprite_frames = SubResource("SpriteFrames_vcaob")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
