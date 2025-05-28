@@ -1,3 +1,4 @@
+ProgressBar
 TileMap
 TextureRect
 AnimatedSprite2D
@@ -11,4 +12,3 @@ RayCast2D
 AnimationPlayer
 Button
 Camera2D
-CanvasLayer

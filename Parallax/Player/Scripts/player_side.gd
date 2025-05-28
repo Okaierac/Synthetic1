@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * Dash_speed
 			dashing = false
 			$Dash_cooldown.start()
+			GlobalVar.dash_CD = true
 			NO_cooldown = false
 		else:
 			velocity.x = direction * SPEED
@@ -64,10 +65,12 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("left") and not isFlipped:
 		sprite_2d.flip_h = true  # Flip the sprite when left arrow is pressed
 		isFlipped = true  # Set the flip state to true
+		GlobalVar.Is_player_flipped = true
 
 	if Input.is_action_just_pressed("right") and isFlipped:
 		sprite_2d.flip_h = false  # Unflip the sprite when right arrow is pressed
 		isFlipped = false  # Set the flip state to false
+		GlobalVar.Is_player_flipped = false
 
 
 
@@ -127,6 +130,7 @@ func _on_hitbox_l_enemy_2_detected_l() -> void:
 
 func _on_hitbox_r_enemy_1_detected_r() -> void:
 	ac.start()
+	GlobalVar.AC = true
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
 			attack.emit()
@@ -135,6 +139,7 @@ func _on_hitbox_r_enemy_1_detected_r() -> void:
 
 func _on_hitbox_r_enemy_2_detected_r() -> void:
 	ac.start()
+	GlobalVar.AC = true
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
 			attack2.emit()

@@ -126,3 +126,7 @@ interact_name = "press e to Open"
 position = Vector2(-15, 37.5)
 scale = Vector2(1.11926, 1.07598)
 shape = SubResource("RectangleShape2D_wgpqb")
+
+[connection signal="common" from="." to="." method="_on_common"]
+[connection signal="legendary" from="." to="." method="_on_legendary"]
+[connection signal="rare" from="." to="." method="_on_rare"]

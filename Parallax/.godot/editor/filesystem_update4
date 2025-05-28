@@ -1,13 +1,18 @@
-res://Scenes/topdown_main.tscn
+res://Player/player_side.tscn
+res://Player/attack_cooldown_bar.gd
+res://GlobalVar.gd
+res://Player/Scripts/player_side.gd
+res://Player/dash_cooldown_bar.gd
+res://Enemies and traps/Chest.gd
+res://Enemies and traps/Chests.tscn
 res://Scenes/main.tscn
 res://Scenes/side_main.tscn
 res://Enemies and traps/penemy_knight.tscn
 res://Enemies/Penemies/character_body_2d.tscn
+res://Scenes/topdown_main.tscn
 res://Main_Menu/main_menu.tscn
 res://Scenes/Game_Over.tscn
-res://Enemies and traps/Chests.tscn
 res://Scenes/static_body_2d.tscn
-res://Player/player_side.tscn
 res://Player/player_topdown.tscn
 res://Npcs/test_npc.tscn
 res://Npcs/jeff.tscn
