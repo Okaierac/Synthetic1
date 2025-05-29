@@ -1,4 +1,3 @@
-res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.tscn
 res://Scenes/main.tscn
 res://Scenes/side_main.tscn
 res://Enemies and traps/penemy_knight.tscn
@@ -12,10 +11,4 @@ res://Player/player_side.tscn
 res://Player/player_topdown.tscn
 res://Npcs/test_npc.tscn
 res://Npcs/jeff.tscn
-res://addons/maaacks_credits_scene/examples/ATTRIBUTION.md
-res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.gd
-res://Chests/Items/Change_Scene_(Item).gd
-res://Player/animated_sprite_2d.gd
-res://Interaction components/interactable.gd
-res://Npcs/tp_npc.gd
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
+res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.tscn
