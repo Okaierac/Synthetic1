@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://d0g482o7qfegi"]
+[gd_scene load_steps=51 format=3 uid="uid://d0g482o7qfegi"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player_side.gd" id="1_nwayo"]
 [ext_resource type="Texture2D" uid="uid://b5cihxyv02720" path="res://Player/Sprites/S_Placeholders/Idle (32x32).png" id="2_1t5hl"]
@@ -12,7 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://dhnm0w4u8ue1e" path="res://Chests/Items/Coin/Coin Icon.png" id="10_qvnvs"]
 [ext_resource type="Script" path="res://Player/Coin_display.gd" id="11_00o70"]
 [ext_resource type="Script" path="res://Player/dash_cooldown_bar.gd" id="12_qjuof"]
+[ext_resource type="Texture2D" uid="uid://tw05vt53alm1" path="res://Icons/Sprint Button Background image.png" id="13_byv3y"]
 [ext_resource type="Script" path="res://Player/attack_cooldown_bar.gd" id="13_fck3c"]
+[ext_resource type="Texture2D" uid="uid://csbh3i2l6dd3e" path="res://Icons/Sprint Boot image.png" id="13_rjgjj"]
+[ext_resource type="Script" path="res://Player/quest_title.gd" id="16_p0arn"]
+[ext_resource type="Script" path="res://Player/Quest_details.gd" id="17_ak5f8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qfv0"]
 atlas = ExtResource("5_ssbcy")
@@ -283,8 +287,8 @@ height = 28.0
 collision_layer = 131
 collision_mask = 129
 script = ExtResource("1_nwayo")
-metadata/_edit_vertical_guides_ = [32.0]
-metadata/_edit_horizontal_guides_ = [-2.0]
+metadata/_edit_vertical_guides_ = [32.0, -20.0, 32.0]
+metadata/_edit_horizontal_guides_ = [-2.0, -8.0, 0.0, -3.0]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -356,15 +360,15 @@ text = "1"
 script = ExtResource("11_00o70")
 metadata/_edit_use_anchors_ = true
 
-[node name="dash_cooldown_bar" type="ProgressBar" parent="."]
-offset_left = -270.0
-offset_top = -116.0
-offset_right = -266.0
-offset_bottom = -89.0
-scale = Vector2(5.41944, 0.761364)
+[node name="dash_cooldown_bar" type="TextureProgressBar" parent="."]
+offset_left = -271.0
+offset_top = -117.0
+offset_right = -246.0
+offset_bottom = -87.0
 max_value = 15.0
 fill_mode = 3
-show_percentage = false
+texture_over = ExtResource("13_rjgjj")
+texture_progress = ExtResource("13_byv3y")
 script = ExtResource("12_qjuof")
 
 [node name="Attack_cooldown_bar" type="ProgressBar" parent="."]
@@ -376,10 +380,33 @@ max_value = 0.25
 show_percentage = false
 script = ExtResource("13_fck3c")
 
+[node name="Quest_Box" type="Panel" parent="."]
+offset_left = -279.0
+offset_top = -82.0
+offset_right = -192.0
+offset_bottom = -16.0
+scale = Vector2(1.00951, 0.985975)
+
+[node name="Label" type="Label" parent="Quest_Box"]
+offset_right = 80.0
+offset_bottom = 23.0
+scale = Vector2(1.00565, 0.338895)
+script = ExtResource("16_p0arn")
+
+[node name="Label2" type="Label" parent="Quest_Box"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 86.0
+offset_bottom = 41.0
+scale = Vector2(1.00471, 0.645667)
+script = ExtResource("17_ak5f8")
+
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
 [connection signal="dash_again" from="." to="." method="_on_dash_again"]
 [connection signal="Player_Died" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_player_died"]
 [connection signal="timeout" from="Dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="Dash_timer" to="dash_cooldown_bar" method="_on_dash_timer_timeout"]
 [connection signal="ready" from="Dash_cooldown" to="." method="_on_dash_cooldown_ready"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="Dash_cooldown" to="dash_cooldown_bar" method="_on_dash_cooldown_timeout"]

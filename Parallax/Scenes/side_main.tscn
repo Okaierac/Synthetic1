@@ -119,3 +119,6 @@ scale = Vector2(0.3, 0.3)
 [connection signal="killed2" from="Penemy_Knight2" to="Goal" method="_on_penemy_knight_2_killed_2"]
 [connection signal="attack" from="Player_Side" to="Penemy_Knight" method="_on_player_side_attack"]
 [connection signal="attack2" from="Player_Side" to="Penemy_Knight2" method="_on_player_side_attack_2"]
+[connection signal="common" from="Chest" to="Chest" method="_on_common"]
+[connection signal="legendary" from="Chest" to="Chest" method="_on_legendary"]
+[connection signal="rare" from="Chest" to="Penemy_Fly" method="_on_chest_rare"]

@@ -59,11 +59,13 @@ func _on_penemy_knight_dead() -> void:
 	
 func _on_common() -> void:
 	GlobalVar.Coins += randi_range(1, 3)
+	print("coins")
 
 
 func _on_legendary() -> void:
 	GlobalVar.Coins += randi_range(5, 8)
-
+	print("coins")
 
 func _on_rare() -> void:
 	GlobalVar.Coins += randi_range(2, 6)
+	print("coins")

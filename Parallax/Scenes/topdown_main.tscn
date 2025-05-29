@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bt51kn760nd5i"]
+[gd_scene load_steps=9 format=3 uid="uid://bt51kn760nd5i"]
 
 [ext_resource type="PackedScene" uid="uid://caaqq6npkg0u0" path="res://Player/player_topdown.tscn" id="1_4q1u2"]
 [ext_resource type="Texture2D" uid="uid://oyr7p4i8jh1q" path="res://Floor/Platformer/Top-down-Grass-Image.png" id="1_fgtsh"]
 [ext_resource type="PackedScene" uid="uid://dr8x4kh1gtkaf" path="res://Npcs/test_npc.tscn" id="3_r803b"]
 [ext_resource type="PackedScene" uid="uid://d4e4m8lv0gk1h" path="res://Npcs/jeff.tscn" id="4_451fj"]
+[ext_resource type="Script" path="res://Scenes/quest_manager.gd" id="5_xdysi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kio4w"]
 texture = ExtResource("1_fgtsh")
@@ -29,6 +30,9 @@ texture = ExtResource("1_fgtsh")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kio4w")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlgia"]
+radius = 45.0
+
 [node name="Top-Down" type="Node"]
 metadata/_edit_vertical_guides_ = [-227.0]
 metadata/_edit_horizontal_guides_ = [-133.0]
@@ -51,3 +55,12 @@ scale = Vector2(2.24619, 2.22973)
 [node name="Jeff" parent="." instance=ExtResource("4_451fj")]
 position = Vector2(1080, 771)
 scale = Vector2(3.1, 2.92308)
+
+[node name="Quest_Manager" type="Area2D" parent="."]
+script = ExtResource("5_xdysi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quest_Manager"]
+position = Vector2(1077, 62)
+shape = SubResource("CircleShape2D_dlgia")
+
+[connection signal="body_entered" from="Quest_Manager" to="Quest_Manager" method="_on_body_entered"]

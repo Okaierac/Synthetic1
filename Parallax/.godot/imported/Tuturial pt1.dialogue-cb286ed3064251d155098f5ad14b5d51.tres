@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rl77r"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_m7d8r"]
 
 [resource]
-script = ExtResource("1_rl77r")
+script = ExtResource("1_m7d8r")
 using_states = PackedStringArray()
 titles = {
 "start": "1"
@@ -20,25 +20,37 @@ lines = {
 "character": "Jeff",
 "id": "1",
 "next_id": "2",
-"text": "Dont worry I'll make sure you dont die out there",
+"text": "you can move with A, S, D",
 "type": "dialogue"
 },
 "2": {
 "character": "Jeff",
 "id": "2",
 "next_id": "3",
-"text": "Lets go",
+"text": "You dash by clicking shift",
 "type": "dialogue"
 },
 "3": {
 "id": "3",
+"next_id": "4",
+"text": "Jeff you attack by clicking the screen while facing the enemy",
+"type": "dialogue"
+},
+"4": {
+"id": "4",
+"next_id": "5",
+"text": "Jeff lets see what you got chase that fly and eliminate the enemies",
+"type": "dialogue"
+},
+"5": {
+"id": "5",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"4": {
-"id": "4",
+"6": {
+"id": "6",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
@@ -46,7 +58,9 @@ lines = {
 }
 }
 raw_text = "~ start
-Jeff: Dont worry I'll make sure you dont die out there
-Jeff: Lets go
+Jeff: you can move with A, S, D
+Jeff: You dash by clicking shift
+Jeff you attack by clicking the screen while facing the enemy
+Jeff lets see what you got chase that fly and eliminate the enemies
 => END"
 metadata/dialogue_manager_version = "3.3.2"

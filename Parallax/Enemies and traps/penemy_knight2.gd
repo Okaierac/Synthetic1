@@ -64,6 +64,7 @@ func _on_player_side_attack_2() -> void:
 
 
 func _on_killed_2() -> void:
+	GlobalVar.Enemies_Killed += 1
 	queue_free()
 
 

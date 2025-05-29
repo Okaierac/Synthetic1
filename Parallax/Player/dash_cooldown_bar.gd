@@ -1,5 +1,5 @@
-extends ProgressBar
-@onready var cooldown_bar: ProgressBar = $"."
+extends TextureProgressBar
+@onready var cooldown_bar: TextureProgressBar = $"."
 @onready var dash_cooldown: Timer = $"../Dash_cooldown"
 
 

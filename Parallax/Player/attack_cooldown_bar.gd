@@ -15,10 +15,12 @@ func _process(delta: float) -> void:
 	else: if GlobalVar.AC == true:
 		ac_bar.show()
 		ac_bar.value = ac.time_left
-	if GlobalVar.Is_player_flipped:
-		ac_bar.flip_h = true
-	if GlobalVar.Is_player_flipped == false:
-		ac_bar.flip_h = false
+	if GlobalVar.Is_player_flipped == true:
+		ac_bar.scale.x = -1
+		ac_bar.position.x = -15
+	else: if GlobalVar.Is_player_flipped == false:
+		ac_bar.scale.x = 1
+		ac_bar.position.x = 25
 
 func _on_ac_timeout() -> void:
 	GlobalVar.AC = false

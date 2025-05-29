@@ -10,6 +10,7 @@ func _ready() -> void:
 	
 func _on_interact():
 	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/quest+tp.dialogue"), "start")
+	GlobalVar.QuestID = "Kill 4 enemies"
 	return
 
 

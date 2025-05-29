@@ -68,6 +68,7 @@ func _on_timer_timeout() -> void:
 		animated_sprite_2d.animation = "alive"
 
 func _on_killed() -> void:
+	GlobalVar.Enemies_Killed += 1
 	print("Enemy1 died at ", global_position)  # Debug print to check the location
 	GlobalVar.enemy_location = global_position  # Store the enemy's position
 	dead.emit()
