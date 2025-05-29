@@ -1,3 +1,5 @@
+Timer
+Node
 TileMap
 TextureRect
 AnimatedSprite2D
@@ -6,9 +8,7 @@ Label
 Sprite2D
 Area2D
 StaticBody2D
-Timer
 RayCast2D
 AnimationPlayer
 Button
 Camera2D
-CanvasLayer
