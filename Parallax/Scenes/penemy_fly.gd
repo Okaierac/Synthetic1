@@ -19,3 +19,5 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		direction *= -1
 	sprite_2d.flip_h = direction > 0
+	position.y = 318416
+	#if position.y == 318568:

@@ -10,6 +10,8 @@ signal dash_again
 signal change_hp
 signal attack
 signal attack2
+signal attack3
+signal attack4
 
 const Dash_speed = 20000
 const SPEED = 400.0
@@ -138,4 +140,52 @@ func _on_hitbox_r_enemy_2_detected_r() -> void:
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
 			attack2.emit()
+			cooldown = false
+
+
+func _on_penemy_knight_3_damage_3() -> void:
+	if damage_cool == false:
+		hp -= 1
+		change_hp.emit()
+		damage_cool = true
+	damage.start()
+
+
+func _on_penemy_knight_4_damage_4() -> void:
+	if damage_cool == false:
+		hp -= 1
+		change_hp.emit()
+		damage_cool = true
+	damage.start()
+
+
+func _on_hitbox_r_enemy_3_detected_r() -> void:
+	ac.start()
+	if isFlipped == false:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack3.emit()
+			cooldown = false
+
+
+func _on_hitbox_r_enemy_4_detected_r() -> void:
+	ac.start()
+	if isFlipped == false:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack4.emit()
+			cooldown = false
+
+
+func _on_hitbox_l_enemy_3_detected_l() -> void:
+	ac.start()
+	if isFlipped:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack3.emit()
+			cooldown = false
+
+
+func _on_hitbox_l_enemy_4_detected_l() -> void:
+	ac.start()
+	if isFlipped:
+		if Input.is_action_just_pressed("attack") and cooldown:
+			attack4.emit()
 			cooldown = false

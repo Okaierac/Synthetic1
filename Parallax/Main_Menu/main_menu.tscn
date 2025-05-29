@@ -1,93 +1,53 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyh3apc4hgh83"]
+[gd_scene load_steps=6 format=3 uid="uid://cyh3apc4hgh83"]
 
 [ext_resource type="Script" path="res://Main_Menu/main_menu.gd" id="1_7o5e2"]
-[ext_resource type="Texture2D" uid="uid://dopnmlwmro6jr" path="res://Background/B_Placeholder/Pixel-Art-Coffee.png" id="1_vy3vv"]
-[ext_resource type="FontFile" uid="uid://cu1fdibbffv8p" path="res://Fonts/Glitch Font/SdglitchdemoRegular-YzROj.ttf" id="2_86ea6"]
-[ext_resource type="Texture2D" uid="uid://ds1vxc3ye01lw" path="res://Background/B_Placeholder/Glitch Backgorund.jpg" id="3_ffpa7"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eno1g"]
-texture = ExtResource("1_vy3vv")
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_lhu31"]
-frames = 2
-frame_0/texture = ExtResource("3_ffpa7")
-frame_1/duration = 1.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kt6k7"]
-texture = SubResource("AnimatedTexture_lhu31")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivq4r"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-shadow_color = Color(0, 0.00633342, 0.38, 1)
-shadow_size = 1
-shadow_offset = Vector2(-3, 0)
+[ext_resource type="Texture2D" uid="uid://6gbuhc7eyjmd" path="res://Main_Menu/Graphics/thumbnail_BACKGROUND MENU.png" id="2_08clq"]
+[ext_resource type="Texture2D" uid="uid://bumeg6fj3kqn" path="res://Main_Menu/Graphics/thumbnail_START.png" id="3_ra74d"]
+[ext_resource type="Texture2D" uid="uid://bn68680w845a2" path="res://Main_Menu/Graphics/thumbnail_SETTINGS.png" id="4_bwwvj"]
+[ext_resource type="Texture2D" uid="uid://bt6fhc3bvmp02" path="res://Main_Menu/Graphics/thumbnail_EXIT.png" id="6_pdql4"]
 
 [node name="Main_Menu" type="Node"]
 script = ExtResource("1_7o5e2")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = -11.0
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -10.0
 offset_top = -4790.0
 offset_right = 1142.0
 offset_bottom = -4142.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_eno1g")
-
-[node name="Title Shadow" type="Label" parent="."]
-offset_left = 293.0
-offset_top = -4749.0
-offset_right = 929.0
-offset_bottom = -4609.0
-theme_override_colors/font_shadow_color = Color(0.724175, 0.1245, 0.83, 1)
-theme_override_constants/shadow_offset_x = 1
-theme_override_fonts/font = ExtResource("2_86ea6")
-theme_override_font_sizes/font_size = 72
-text = "Parallax"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("2_08clq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(566, -4466)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = -1
-anchor_right = 0.181
-offset_left = 528.0
-offset_top = -4483.0
-offset_right = 527.488
-offset_bottom = -4206.0
-theme_override_constants/separation = 5
+[node name="Start" type="TextureButton" parent="."]
+offset_left = 59.0
+offset_top = -4479.0
+offset_right = 113.0
+offset_bottom = -4439.0
+scale = Vector2(4.72, 1.21229)
+texture_normal = ExtResource("3_ra74d")
+stretch_mode = 0
 
-[node name="Start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_86ea6")
-theme_override_font_sizes/font_size = 66
-theme_override_styles/hover = SubResource("StyleBoxTexture_kt6k7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ivq4r")
-action_mode = 0
-text = "Start
-"
+[node name="Settings" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 60.0
+offset_top = -4401.0
+offset_right = 130.0
+offset_bottom = -4361.0
+scale = Vector2(3.28, 1.32)
+texture_normal = ExtResource("4_bwwvj")
+stretch_mode = 0
 
-[node name="Settings" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_86ea6")
-theme_override_font_sizes/font_size = 66
-theme_override_styles/hover = SubResource("StyleBoxTexture_kt6k7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ivq4r")
-text = "Settings
-"
+[node name="Exit" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 60.0
+offset_top = -4317.0
+offset_right = 105.0
+offset_bottom = -4277.0
+scale = Vector2(4.92, 1.16)
+texture_normal = ExtResource("6_pdql4")
+stretch_mode = 0
 
-[node name="Exit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_86ea6")
-theme_override_font_sizes/font_size = 66
-theme_override_styles/hover = SubResource("StyleBoxTexture_kt6k7")
-theme_override_styles/normal = SubResource("StyleBoxFlat_ivq4r")
-text = "Exit
-"
-
-[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

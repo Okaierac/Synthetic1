@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgn6nhkmw67td"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_credits_scene/examples/scenes/credits/credits.tscn" id="1_885d8"]
+[ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_credits_scene/examples/scenes/credits/credits.tscn" id="1_885d8"]
 [ext_resource type="Script" path="res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.gd" id="2_6pwj4"]
 [ext_resource type="Script" path="res://addons/maaacks_credits_scene/base/scripts/capture_focus.gd" id="3_aoilo"]
-[ext_resource type="PackedScene" path="res://addons/maaacks_credits_scene/base/scenes/music_players/background_music_player.tscn" id="3_v7acr"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_credits_scene/base/scenes/music_players/background_music_player.tscn" id="3_v7acr"]
 
 [node name="EndCredits" instance=ExtResource("1_885d8")]
 script = ExtResource("2_6pwj4")
@@ -40,17 +40,17 @@ custom_minimum_size = Vector2(0, 648)
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
 texture_filter = 1
 custom_minimum_size = Vector2(1152, 0)
-text = "[center][font_size=48]Parallax[/font_size]
+text = "[center][font_size=48]Parallax[/font_size]
 
 
 
 
-[font_size=32]Developed By[/font_size]
+[font_size=32]Developed By[/font_size]
 David Sepúlveda  
 Jaden Ogunleye  
 
 
-[font_size=32]Artwork By[/font_size]
+[font_size=32]Artwork By[/font_size]
 Sophia Lorin Tumulak  
 
 
@@ -81,7 +81,7 @@ Sophia Lorin Tumulak
 
 
 
-[font_size=32]Made With Passion by Students[/font_size]
+[font_size=32]Made With Passion by Students[/font_size]
 [/center]"
 
 [node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]

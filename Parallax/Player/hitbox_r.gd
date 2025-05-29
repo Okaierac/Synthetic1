@@ -2,6 +2,8 @@ extends RayCast2D
 
 signal enemy1_detected_r
 signal enemy2_detected_r
+signal enemy3_detected_r
+signal enemy4_detected_r
 
 @onready var hitbox_r: RayCast2D = $"."
 
@@ -16,5 +18,9 @@ func _process(delta: float) -> void:
 		#print("Hit object: ", collider.name)  ## or collider.get_class(), collider, etc.
 		if collider.name == "HitboxKnight":
 			enemy1_detected_r.emit()
-		else:
+		elif collider.name == "HitboxKnight2":
 			enemy2_detected_r.emit()
+		elif collider.name == "HitboxKnight3":
+			enemy3_detected_r.emit()
+		else:
+			enemy4_detected_r.emit()

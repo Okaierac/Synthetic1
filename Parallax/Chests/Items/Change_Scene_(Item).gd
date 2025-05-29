@@ -5,6 +5,8 @@ extends StaticBody2D
 @onready var interactable: Area2D = $Interactable
 var penemy1 = "alive"
 var penemy2 = "alive"
+var penemy3 = "alive"
+var penemy4 = "alive"
 
 #func _on_body_entered(body):
 	#print("Touched by:", body.name)  # Debugging
@@ -29,5 +31,13 @@ func _on_penemy_knight_2_killed_2() -> void:
 	penemy2 = "dead"
 
 func _physics_process(delta: float) -> void:
-	if penemy1 == "dead" and penemy2 == "dead":
-		position = Vector2(3364, 318623)
+	if penemy1 == "dead" and penemy2 == "dead" and penemy3 == "dead" and penemy4 == "dead":
+		position = Vector2(3364, 318617)
+
+
+func _on_penemy_knight_3_killed_3() -> void:
+	penemy3 = "dead"
+
+
+func _on_penemy_knight_4_killed_4() -> void:
+	penemy4 = "dead"
