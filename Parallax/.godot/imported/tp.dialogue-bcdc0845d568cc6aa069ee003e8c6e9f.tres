@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cwhye"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_l5nvy"]
 
 [resource]
-script = ExtResource("1_cwhye")
+script = ExtResource("1_l5nvy")
 using_states = PackedStringArray()
 titles = {
 "start": "1"
@@ -20,7 +20,7 @@ lines = {
 "character": "Jeff",
 "id": "1",
 "next_id": "2",
-"text": "Lets go",
+"text": "We've arrived!",
 "type": "dialogue"
 },
 "2": {
@@ -39,6 +39,6 @@ lines = {
 }
 }
 raw_text = "~ start
-Jeff: Lets go
+Jeff: We've arrived!
 => END"
 metadata/dialogue_manager_version = "3.3.2"

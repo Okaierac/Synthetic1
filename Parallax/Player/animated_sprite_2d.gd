@@ -1,6 +1,6 @@
 extends AnimatedSprite2D
 
-var hp = 10
+var hp = 7
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $"."
 

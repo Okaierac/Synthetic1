@@ -1,15 +1,16 @@
 ~ start
 Wizard: [[Hi|Hello|Sup]]
-Wizard: Would you be able to help me?
+Wizard: There has been sightings of bewitched knights.
+Wizard: Could you take care of them for me?
 - Yes. => yes
 - No.
-	MC: NO!!
+	MC: No.
 - End the conversation.
 => END
 
 ~ yes
 MC: Yes.
-Wizard: Thank you so much
-Wizard: You will go great and beyond
-Go to Jeff he will help you
+Wizard: Thank you.
+Wizard: I wish you luck young warrior.
+Go to Jeff he will take you there
 => END

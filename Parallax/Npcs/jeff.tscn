@@ -116,6 +116,7 @@ position = Vector2(0, 4)
 shape = SubResource("CircleShape2D_algat")
 
 [node name="next_label" type="Label" parent="."]
+texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rpejs"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jfijq"]
 
 [resource]
-script = ExtResource("1_rpejs")
+script = ExtResource("1_jfijq")
 using_states = PackedStringArray()
 titles = {
 "start": "1",
-"yes": "10"
+"yes": "11"
 }
 character_names = PackedStringArray("Wizard", "MC")
 first_title = "0"
@@ -25,46 +25,51 @@ lines = {
 "type": "dialogue"
 },
 "10": {
-"character": "MC",
 "id": "10",
 "next_id": "11",
-"text": "Yes.",
-"type": "dialogue"
+"type": "title"
 },
 "11": {
-"character": "Wizard",
+"character": "MC",
 "id": "11",
 "next_id": "12",
-"text": "Thank you so much",
+"text": "Yes.",
 "type": "dialogue"
 },
 "12": {
 "character": "Wizard",
 "id": "12",
 "next_id": "13",
-"text": "You will go great and beyond",
+"text": "Thank you.",
 "type": "dialogue"
 },
 "13": {
+"character": "Wizard",
 "id": "13",
 "next_id": "14",
-"text": "Go to Jeff he will help you",
+"text": "I wish you luck young warrior.",
 "type": "dialogue"
 },
 "14": {
 "id": "14",
+"next_id": "15",
+"text": "Go to Jeff he will take you there",
+"type": "dialogue"
+},
+"15": {
+"id": "15",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"15": {
-"id": "15",
-"next_id": "16",
-"type": ""
-},
 "16": {
 "id": "16",
+"next_id": "17",
+"type": ""
+},
+"17": {
+"id": "17",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
@@ -74,67 +79,70 @@ lines = {
 "character": "Wizard",
 "id": "2",
 "next_id": "3",
-"text": "Would you be able to help me?",
+"text": "There has been sightings of bewitched knights.",
 "type": "dialogue"
 },
 "3": {
+"character": "Wizard",
 "id": "3",
-"next_id": "10",
-"responses": PackedStringArray("3", "4", "6"),
-"text": "Yes.",
-"type": "response"
+"next_id": "4",
+"text": "Could you take care of them for me?",
+"type": "dialogue"
 },
 "4": {
 "id": "4",
-"next_id": "5",
-"text": "No.",
+"next_id": "11",
+"responses": PackedStringArray("4", "5", "7"),
+"text": "Yes.",
 "type": "response"
 },
 "5": {
-"character": "MC",
 "id": "5",
-"next_id": "7",
-"text": "NO!!",
-"type": "dialogue"
+"next_id": "6",
+"text": "No.",
+"type": "response"
 },
 "6": {
+"character": "MC",
 "id": "6",
-"next_id": "7",
-"text": "End the conversation.",
-"type": "response"
+"next_id": "8",
+"text": "No.",
+"type": "dialogue"
 },
 "7": {
 "id": "7",
+"next_id": "8",
+"text": "End the conversation.",
+"type": "response"
+},
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
 "next_id_after": "",
 "type": "goto"
 },
-"8": {
-"id": "8",
-"next_id": "9",
-"type": ""
-},
 "9": {
 "id": "9",
 "next_id": "10",
-"type": "title"
+"type": ""
 }
 }
 raw_text = "~ start
 Wizard: [[Hi|Hello|Sup]]
-Wizard: Would you be able to help me?
+Wizard: There has been sightings of bewitched knights.
+Wizard: Could you take care of them for me?
 - Yes. => yes
 - No.
-	MC: NO!!
+	MC: No.
 - End the conversation.
 => END
 
 ~ yes
 MC: Yes.
-Wizard: Thank you so much
-Wizard: You will go great and beyond
-Go to Jeff he will help you
+Wizard: Thank you.
+Wizard: I wish you luck young warrior.
+Go to Jeff he will take you there
 => END
 "
 metadata/dialogue_manager_version = "3.3.2"

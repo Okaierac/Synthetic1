@@ -15,10 +15,9 @@ func _ready() -> void:
 	interactable.interact = _on_interact
 
 func _on_interact():
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogues/tp.dialogue"), "start")
 	var ready_to_tp = true
 	if ready_to_tp == true:
-		get_tree().change_scene_to_file(top_down_scene)
+		get_tree().change_scene_to_file("res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.tscn")
 	return
 
 

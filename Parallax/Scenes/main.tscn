@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cre5vlbx1oocq"]
+[gd_scene load_steps=5 format=3 uid="uid://cre5vlbx1oocq"]
 
 [ext_resource type="PackedScene" uid="uid://db8pfunv7r7kj" path="res://Scenes/side_main.tscn" id="1_varkt"]
 [ext_resource type="PackedScene" uid="uid://bt51kn760nd5i" path="res://Scenes/topdown_main.tscn" id="2_0wi28"]
 [ext_resource type="PackedScene" uid="uid://cyh3apc4hgh83" path="res://Main_Menu/main_menu.tscn" id="3_toklc"]
+[ext_resource type="PackedScene" uid="uid://dgn6nhkmw67td" path="res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.tscn" id="4_wv1qv"]
 
 [node name="Main" type="Node"]
 
@@ -11,3 +12,5 @@
 [node name="Top-Down" parent="." instance=ExtResource("2_0wi28")]
 
 [node name="Side" parent="." instance=ExtResource("1_varkt")]
+
+[node name="EndCredits" parent="." instance=ExtResource("4_wv1qv")]
