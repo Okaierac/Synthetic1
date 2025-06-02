@@ -1,5 +1,5 @@
 6b83eef13f46d74bce552f92a480ef09
-::res://::1748534922
+::res://::1748876111
 CHest.tscn::PackedScene::4164496294669144049::1748274948::0::1::::<><>::res://Enemies and traps/Chest.gd<>uid://627lavgk6ioc::::res://Chests/Chests.png<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
 GlobalVar.gd::GDScript::-1::1748274948::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::2102721303947116860::1746198624::1748530141::1::::<><>::
@@ -131,18 +131,18 @@ Coin Icon.png::CompressedTexture2D::7678195317375757304::1746802665::1748530142:
 Coin_spreadsheet.png::CompressedTexture2D::3786343509455769989::1746802665::1748530142::1::::<><>::
 ::res://Chests/Items/Health/::1748530142
 HP_spreadsheet.png::CompressedTexture2D::4524374924323433692::1746802665::1748530142::1::::<><>::
-::res://dialogues/::1748534971
+::res://dialogues/::1748536047
 quest+tp.dialogue::Resource::2415124736065822529::1748530153::1748536047::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 tp.dialogue::Resource::7459908701795832690::1748530052::1748530140::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ::res://Enemies/::1746804649
-::res://Enemies/Penemies/::1748534970
+::res://Enemies/Penemies/::1748536046
 character_body_2d.tscn::PackedScene::6539418030213146195::1748536046::0::1::::<><>::uid://xludn5yth3fq::::res://Side Characters/Sprites/thumbnail_Final knight-6.png.png<>res://Enemies and traps/penemy_knight2.gd<>uid://dte30ynxg823y::::res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png<>uid://cqoep2qp4p7nr::::res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png
 Fly.png::CompressedTexture2D::6417245606343302505::1746198624::1748530142::1::::<><>::
 penemy_knight_3.gd::GDScript::-1::1748532514::0::1::::<>CharacterBody2D<>::
 penemy_knight_3.tscn::PackedScene::2914542129764963214::1748536046::0::1::::<><>::res://Enemies/Penemies/penemy_knight_3.gd<>uid://xludn5yth3fq::::res://Side Characters/Sprites/thumbnail_Final knight-6.png.png<>uid://dte30ynxg823y::::res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png<>uid://cqoep2qp4p7nr::::res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png
 penemy_knight_4.gd::GDScript::-1::1748532589::0::1::::<>CharacterBody2D<>::
 penemy_knight_4.tscn::PackedScene::7468094093779196363::1748536046::0::1::::<><>::uid://xludn5yth3fq::::res://Side Characters/Sprites/thumbnail_Final knight-6.png.png<>res://Enemies/Penemies/penemy_knight_4.gd<>uid://dte30ynxg823y::::res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png.png<>uid://cqoep2qp4p7nr::::res://Side Characters/Sprites/thumbnail_Final knight-6.png-2.png (1).png
-::res://Enemies and traps/::1748534970
+::res://Enemies and traps/::1748536046
 Chest.gd::GDScript::-1::1748274948::0::1::::<>CharacterBody2D<>::
 Chest.tscn::PackedScene::7673905239529953493::1746802665::0::1::::<><>::res://Enemies and traps/Chest.gd<>uid://627lavgk6ioc::::res://Chests/Chests.png<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
 Chests.tscn::PackedScene::236887827987559683::1748530157::0::1::::<><>::res://Enemies and traps/Chest.gd<>uid://627lavgk6ioc::::res://Chests/Chests.png<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
@@ -171,9 +171,9 @@ interaction_component.tscn::PackedScene::7070228342586956964::1746203349::0::1::
 ::res://Items/::1746804649
 ::res://Items/Coin/::1746802664
 ::res://Items/Health/::1746802664
-::res://Main_Menu/::1748535193
+::res://Main_Menu/::1748536057
 main_menu.gd::GDScript::-1::1748535622::0::1::::<>Node<>::
-main_menu.tscn::PackedScene::6473525127041946458::1748536047::0::1::::<><>::res://Main_Menu/main_menu.gd<>uid://6gbuhc7eyjmd::::res://Main_Menu/Graphics/thumbnail_BACKGROUND MENU.png<>uid://bumeg6fj3kqn::::res://Main_Menu/Graphics/thumbnail_START.png<>uid://bn68680w845a2::::res://Main_Menu/Graphics/thumbnail_SETTINGS.png<>uid://bt6fhc3bvmp02::::res://Main_Menu/Graphics/thumbnail_EXIT.png
+main_menu.tscn::PackedScene::6473525127041946458::1748536056::0::1::::<><>::res://Main_Menu/main_menu.gd<>uid://6gbuhc7eyjmd::::res://Main_Menu/Graphics/thumbnail_BACKGROUND MENU.png<>uid://bumeg6fj3kqn::::res://Main_Menu/Graphics/thumbnail_START.png<>uid://bn68680w845a2::::res://Main_Menu/Graphics/thumbnail_SETTINGS.png<>uid://bt6fhc3bvmp02::::res://Main_Menu/Graphics/thumbnail_EXIT.png
 ::res://Main_Menu/Graphics/::1748535343
 thumbnail_BACKGROUND MENU.png::CompressedTexture2D::2188337224387519807::1748533835::1748533835::1::::<><>::
 thumbnail_EXIT.png::CompressedTexture2D::3784320657087948281::1748535243::1748535244::1::::<><>::
@@ -184,7 +184,7 @@ jeff.gd::GDScript::-1::1748275212::0::1::::<>CharacterBody2D<>::
 jeff.tscn::PackedScene::9204780001166771523::1748530159::0::1::::<><>::uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>res://Npcs/jeff.gd<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
 test_npc.tscn::PackedScene::8422045674903926693::1748530159::0::1::::<><>::res://Npcs/tp_npc.gd<>uid://b5cihxyv02720::::res://Player/Sprites/S_Placeholders/Idle (32x32).png<>uid://b0iu14qigxbj5::::res://Interaction components/interactable.tscn
 tp_npc.gd::GDScript::-1::1748530050::0::1::::<>CharacterBody2D<>::
-::res://Player/::1748534971
+::res://Player/::1748536047
 animated_sprite_2d.gd::GDScript::-1::1748530050::0::1::::<>AnimatedSprite2D<>::
 Coin_display.gd::GDScript::-1::1748274948::0::1::::<>Label<>::
 hitbox_l.gd::GDScript::-1::1748531736::0::1::::<>RayCast2D<>::
@@ -200,7 +200,7 @@ State.gd::GDScript::-1::1746198624::0::1::::state<>Node<>::
 Idle (32x32).png::CompressedTexture2D::4496714230942668855::1746198624::1748530141::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::5352165326628467453::1746198624::1748530141::1::::<><>::
 Run (32x32).png::CompressedTexture2D::4736558263418303045::1746198624::1748530141::1::::<><>::
-::res://Scenes/::1748534970
+::res://Scenes/::1748536045
 animated_sprite_2d.gd::GDScript::-1::1746802665::0::1::::<>AnimatedSprite2D<>::
 game_over.gd::GDScript::-1::1746802665::0::1::::<>Node<>::
 Game_Over.tscn::PackedScene::8542078337738052428::1748530157::0::1::::<><>::res://Scenes/game_over.gd<>uid://bfjwg257640et::::res://Background/pixilart-sprite.png<>res://Scenes/animated_sprite_2d.gd

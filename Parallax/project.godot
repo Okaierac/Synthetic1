@@ -23,6 +23,7 @@ GlobalVar="*res://GlobalVar.gd"
 
 [display]
 
+window/size/mode=3
 window/size/window_width_override=1920
 window/stretch/mode="viewport"
 

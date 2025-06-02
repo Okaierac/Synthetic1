@@ -1,3 +1,11 @@
+Button
+Label
+OptionButton
+CheckBox
+HSlider
+VBoxContainer
+MarginContainer
+Control
 TextureButton
 TextureRect
 Panel
@@ -5,10 +13,3 @@ Timer
 CharacterBody2D
 Node
 TileMap
-AnimatedSprite2D
-Label
-Sprite2D
-Area2D
-StaticBody2D
-RayCast2D
-AnimationPlayer
