@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://ccmvspld2g5eo"
+path="res://.godot/imported/Go TO WIzard.dialogue-950d3a00576dd76a8d853c48a4db298d.tres"
+
+[deps]
+
+source_file="res://dialogues/Go TO WIzard.dialogue"
+dest_files=["res://.godot/imported/Go TO WIzard.dialogue-950d3a00576dd76a8d853c48a4db298d.tres"]
+
+[params]
+
+defaults=true

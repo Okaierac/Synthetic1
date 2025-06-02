@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgfwlrg8txced"]
+
+[ext_resource type="Texture2D" uid="uid://bk73x6o1ec1ah" path="res://Main_Menu/Graphics/Sprint Button Background image.png" id="1_whncg"]
+[ext_resource type="Script" path="res://Scenes/barrier.gd" id="2_nbpfm"]
+[ext_resource type="PackedScene" uid="uid://b0iu14qigxbj5" path="res://Interaction components/interactable.tscn" id="3_a654g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydfep"]
+size = Vector2(38.3356, 48.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ur4g7"]
+radius = 21.0
+
+[node name="Barrier" type="Sprite2D"]
+position = Vector2(1045, 12072)
+scale = Vector2(7.33, 0.266667)
+texture = ExtResource("1_whncg")
+script = ExtResource("2_nbpfm")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-0.750381, 1.875)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ydfep")
+
+[node name="Interactable" parent="." instance=ExtResource("3_a654g")]
+interact_name = "press e to start conversation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_ur4g7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://d0g482o7qfegi"]
+[gd_scene load_steps=49 format=3 uid="uid://d0g482o7qfegi"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player_side.gd" id="1_nwayo"]
 [ext_resource type="Texture2D" uid="uid://b5cihxyv02720" path="res://Player/Sprites/S_Placeholders/Idle (32x32).png" id="2_1t5hl"]
@@ -11,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://c7y4vl1gwhaga" path="res://Interaction components/interaction_component.tscn" id="9_yhub3"]
 [ext_resource type="Texture2D" uid="uid://dhnm0w4u8ue1e" path="res://Chests/Items/Coin/Coin Icon.png" id="10_qvnvs"]
 [ext_resource type="Script" path="res://Player/Coin_display.gd" id="11_00o70"]
+[ext_resource type="Texture2D" uid="uid://c70ejlikdqwl0" path="res://Main_Menu/Graphics/Sprint Boot image.png" id="12_qno0w"]
+[ext_resource type="Texture2D" uid="uid://bk73x6o1ec1ah" path="res://Main_Menu/Graphics/Sprint Button Background image.png" id="13_pip2c"]
+[ext_resource type="Script" path="res://Player/dash_cooldown_bar.gd" id="14_oh8cp"]
+[ext_resource type="Script" path="res://Player/attack_cooldown_bar.gd" id="15_xwb51"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5qfv0"]
 atlas = ExtResource("5_ssbcy")
@@ -305,7 +309,7 @@ shape = SubResource("CapsuleShape2D_1xprf")
 wait_time = 0.2
 
 [node name="Dash_cooldown" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 15.0
 
 [node name="HitboxR" type="RayCast2D" parent="."]
 target_position = Vector2(70, 0)
@@ -335,14 +339,43 @@ position = Vector2(267, -136)
 scale = Vector2(0.125556, 0.125556)
 texture = ExtResource("10_qvnvs")
 
-[node name="Label" type="Label" parent="Coins"]
-offset_left = -422.122
-offset_top = -87.6102
-offset_right = -159.122
-offset_bottom = 95.3898
-theme_override_font_sizes/font_size = 70
+[node name="Coins_display" type="Label" parent="Coins"]
+offset_left = -334.512
+offset_top = -87.6103
+offset_right = -71.5121
+offset_bottom = 95.3897
+theme_override_colors/font_color = Color(1, 0.87451, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.843137, 0.580392, 0.176471, 1)
+theme_override_colors/font_outline_color = Color(0.843137, 0.580392, 0.176471, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 26
+theme_override_font_sizes/font_size = 120
+text = "1"
 script = ExtResource("11_00o70")
 metadata/_edit_use_anchors_ = true
+
+[node name="dash_cooldown_bar" type="TextureProgressBar" parent="."]
+offset_left = -268.0
+offset_top = -116.0
+offset_right = -242.0
+offset_bottom = -84.0
+scale = Vector2(0.78, 0.78)
+max_value = 15.0
+fill_mode = 3
+texture_over = ExtResource("12_qno0w")
+texture_progress = ExtResource("13_pip2c")
+script = ExtResource("14_oh8cp")
+
+[node name="attack_cooldown_bar" type="ProgressBar" parent="."]
+offset_left = 16.0
+offset_top = -6.0
+offset_right = 31.0
+offset_bottom = -2.0
+max_value = 0.25
+show_percentage = false
+script = ExtResource("15_xwb51")
 
 [connection signal="change_hp" from="." to="AnimatedSprite2D" method="_on_player_side_change_hp"]
 [connection signal="dash_again" from="." to="." method="_on_dash_again"]
@@ -350,6 +383,7 @@ metadata/_edit_use_anchors_ = true
 [connection signal="timeout" from="Dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="ready" from="Dash_cooldown" to="." method="_on_dash_cooldown_ready"]
 [connection signal="timeout" from="Dash_cooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="Dash_cooldown" to="dash_cooldown_bar" method="_on_dash_cooldown_timeout"]
 [connection signal="enemy1_detected_r" from="HitboxR" to="." method="_on_hitbox_r_enemy_1_detected_r"]
 [connection signal="enemy2_detected_r" from="HitboxR" to="." method="_on_hitbox_r_enemy_2_detected_r"]
 [connection signal="enemy3_detected_r" from="HitboxR" to="." method="_on_hitbox_r_enemy_3_detected_r"]
@@ -359,4 +393,5 @@ metadata/_edit_use_anchors_ = true
 [connection signal="enemy3_detected_l" from="HitboxL" to="." method="_on_hitbox_l_enemy_3_detected_l"]
 [connection signal="enemy4_detected_l" from="HitboxL" to="." method="_on_hitbox_l_enemy_4_detected_l"]
 [connection signal="timeout" from="AC" to="." method="_on_ac_timeout"]
+[connection signal="timeout" from="AC" to="attack_cooldown_bar" method="_on_ac_timeout"]
 [connection signal="timeout" from="Damage" to="." method="_on_damage_timeout"]

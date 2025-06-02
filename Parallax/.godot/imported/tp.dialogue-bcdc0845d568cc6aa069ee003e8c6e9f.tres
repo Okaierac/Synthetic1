@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_fb8ih"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_fpfin"]
 
 [resource]
-script = ExtResource("1_fb8ih")
+script = ExtResource("1_fpfin")
 using_states = PackedStringArray()
 titles = {
 "start": "1"

@@ -1,3 +1,4 @@
+res://Npcs
 res://Enemies/Penemies
 res://Floor/Platformer
 res://Player/Sprites/S_Placeholders
@@ -10,6 +11,5 @@ res://Chests
 res://Background
 res://Fonts/Glitch Font
 res://Main_Menu
-res://Npcs
 res://Interaction components
 res://Player/Scripts

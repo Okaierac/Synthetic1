@@ -11,6 +11,7 @@ func _on_interact():
 	if not interacted:
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogues/quest+tp.dialogue"), "start")
 	interacted = true
+	GlobalVar.TalkedtoWizard = 2
 	timer.start()
 	return
 

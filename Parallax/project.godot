@@ -23,6 +23,7 @@ GlobalVar="*res://GlobalVar.gd"
 
 [display]
 
+window/size/mode=3
 window/size/window_width_override=1920
 window/stretch/mode="viewport"
 
@@ -88,7 +89,7 @@ attack={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/quest+tp.dialogue", "res://dialogues/tp.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/quest+tp.dialogue", "res://dialogues/tp.dialogue", "res://dialogues/Go TO WIzard.dialogue")
 
 [layer_names]
 

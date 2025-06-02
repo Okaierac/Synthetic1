@@ -51,6 +51,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction * Dash_speed
 			dashing = false
 			$Dash_cooldown.start()
+			GlobalVar.dash_CD = true
 			NO_cooldown = false
 		else:
 			velocity.x = direction * SPEED
@@ -66,11 +67,12 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("left") and not isFlipped:
 		sprite_2d.flip_h = true  # Flip the sprite when left arrow is pressed
 		isFlipped = true  # Set the flip state to true
+		GlobalVar.Is_player_flipped = true
 
 	if Input.is_action_just_pressed("right") and isFlipped:
 		sprite_2d.flip_h = false  # Unflip the sprite when right arrow is pressed
 		isFlipped = false  # Set the flip state to false
-
+		GlobalVar.Is_player_flipped = false
 
 
 func _on_penemy_knight_damage() -> void:
@@ -112,6 +114,7 @@ func _on_penemy_knight_2_damage_2() -> void:
 
 
 func _on_hitbox_l_enemy_1_detected_l() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -120,6 +123,7 @@ func _on_hitbox_l_enemy_1_detected_l() -> void:
 
 
 func _on_hitbox_l_enemy_2_detected_l() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -128,6 +132,7 @@ func _on_hitbox_l_enemy_2_detected_l() -> void:
 
 
 func _on_hitbox_r_enemy_1_detected_r() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -136,6 +141,7 @@ func _on_hitbox_r_enemy_1_detected_r() -> void:
 
 
 func _on_hitbox_r_enemy_2_detected_r() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -144,6 +150,7 @@ func _on_hitbox_r_enemy_2_detected_r() -> void:
 
 
 func _on_penemy_knight_3_damage_3() -> void:
+	GlobalVar.AC = true
 	if damage_cool == false:
 		hp -= 1
 		change_hp.emit()
@@ -152,6 +159,7 @@ func _on_penemy_knight_3_damage_3() -> void:
 
 
 func _on_penemy_knight_4_damage_4() -> void:
+	GlobalVar.AC = true
 	if damage_cool == false:
 		hp -= 1
 		change_hp.emit()
@@ -160,6 +168,7 @@ func _on_penemy_knight_4_damage_4() -> void:
 
 
 func _on_hitbox_r_enemy_3_detected_r() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -168,6 +177,7 @@ func _on_hitbox_r_enemy_3_detected_r() -> void:
 
 
 func _on_hitbox_r_enemy_4_detected_r() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped == false:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -176,6 +186,7 @@ func _on_hitbox_r_enemy_4_detected_r() -> void:
 
 
 func _on_hitbox_l_enemy_3_detected_l() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped:
 		if Input.is_action_just_pressed("attack") and cooldown:
@@ -184,6 +195,7 @@ func _on_hitbox_l_enemy_3_detected_l() -> void:
 
 
 func _on_hitbox_l_enemy_4_detected_l() -> void:
+	GlobalVar.AC = true
 	ac.start()
 	if isFlipped:
 		if Input.is_action_just_pressed("attack") and cooldown:
