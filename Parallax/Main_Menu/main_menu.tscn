@@ -19,35 +19,34 @@ texture = ExtResource("2_08clq")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(566, -4466)
 
-[node name="Start" type="TextureButton" parent="."]
-offset_left = 59.0
-offset_top = -4479.0
-offset_right = 113.0
-offset_bottom = -4439.0
-scale = Vector2(4.72, 1.21229)
+[node name="MarginContainer" type="MarginContainer" parent="."]
+texture_filter = 1
+offset_left = 73.0
+offset_top = -4458.0
+offset_right = 1225.0
+offset_bottom = -4325.0
+scale = Vector2(0.219999, 4.58)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
 texture_normal = ExtResource("3_ra74d")
 stretch_mode = 0
 
-[node name="Settings" type="TextureButton" parent="."]
+[node name="Settings" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
-offset_left = 60.0
-offset_top = -4401.0
-offset_right = 130.0
-offset_bottom = -4361.0
-scale = Vector2(3.28, 1.32)
+layout_mode = 2
 texture_normal = ExtResource("4_bwwvj")
 stretch_mode = 0
 
-[node name="Exit" type="TextureButton" parent="."]
+[node name="Exit" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
-offset_left = 60.0
-offset_top = -4317.0
-offset_right = 105.0
-offset_bottom = -4277.0
-scale = Vector2(4.92, 1.16)
+layout_mode = 2
 texture_normal = ExtResource("6_pdql4")
 stretch_mode = 0
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

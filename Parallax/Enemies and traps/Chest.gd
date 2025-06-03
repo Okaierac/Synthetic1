@@ -7,6 +7,7 @@ var Chest_Value = 0
 @onready var chest: CharacterBody2D = $"."
 var teleport_to_enemy := false
 var special_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 47]
+@onready var timer: Timer = $Timer
 
 #Coins
 signal common
@@ -17,11 +18,8 @@ func _on_body_entered(body: CharacterBody2D) -> void:
 	entered = true
 
 
-
-
 func _on_body_exited(body: CharacterBody2D) -> void:
 	entered = false
-
 
 func _ready() -> void:
 	interactable.interact = _on_interact
@@ -37,6 +35,7 @@ func _on_interact():
 		if Chest_Value in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
 			Chest_Anim.play("Legendary-Open")
 			legendary.emit()
+		timer.start()
 	return
 
 func _on_penemy_knight_killed() -> void:
@@ -69,3 +68,6 @@ func _on_legendary() -> void:
 func _on_rare() -> void:
 	GlobalVar.Coins += randi_range(2, 6)
 	print("coins")
+
+func _on_timer_timeout() -> void:
+	queue_free()

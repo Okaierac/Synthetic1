@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjwnstxlm8jg8"]
+
+[ext_resource type="Script" path="res://Scenes/settings.gd" id="1_k63v2"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k63v2")
+
+[node name="Settings_Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 394.0
+offset_right = 456.0
+offset_bottom = 23.0
+scale = Vector2(5.7, 5.7)
+text = "Settings"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 23.0
+offset_top = 142.0
+offset_right = 1175.0
+offset_bottom = 275.0
+scale = Vector2(0.9, 0.9)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="WFS" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="Volume" type="Label" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume_Slider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mute" type="Label" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Mute"
+
+[node name="Mute_CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Go Back_Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 597.0
+offset_right = 77.0
+offset_bottom = 628.0
+scale = Vector2(1.4, 1.4)
+text = "Go Back"
+
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/WFS" to="." method="_on_wfs_item_selected"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume_Slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute_CheckBox" to="." method="_on_mute_check_box_toggled"]
+[connection signal="pressed" from="Go Back_Button" to="." method="_on_go_back_button_pressed"]

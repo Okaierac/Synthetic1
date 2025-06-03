@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cre5vlbx1oocq"]
+[gd_scene load_steps=7 format=3 uid="uid://cre5vlbx1oocq"]
 
 [ext_resource type="PackedScene" uid="uid://db8pfunv7r7kj" path="res://Scenes/side_main.tscn" id="1_varkt"]
 [ext_resource type="PackedScene" uid="uid://bt51kn760nd5i" path="res://Scenes/topdown_main.tscn" id="2_0wi28"]
 [ext_resource type="PackedScene" uid="uid://cyh3apc4hgh83" path="res://Main_Menu/main_menu.tscn" id="3_toklc"]
+[ext_resource type="PackedScene" uid="uid://dtx31uh7omt85" path="res://Scenes/Game_Over.tscn" id="4_0i8qq"]
 [ext_resource type="PackedScene" uid="uid://dgn6nhkmw67td" path="res://addons/maaacks_credits_scene/examples/scenes/end_credits/end_credits.tscn" id="4_wv1qv"]
+[ext_resource type="PackedScene" uid="uid://cjwnstxlm8jg8" path="res://Scenes/settings.tscn" id="6_fcfg3"]
 
 [node name="Main" type="Node"]
 
@@ -13,4 +15,8 @@
 
 [node name="Side" parent="." instance=ExtResource("1_varkt")]
 
+[node name="Game_Over" parent="." instance=ExtResource("4_0i8qq")]
+
 [node name="EndCredits" parent="." instance=ExtResource("4_wv1qv")]
+
+[node name="Settings" parent="." instance=ExtResource("6_fcfg3")]

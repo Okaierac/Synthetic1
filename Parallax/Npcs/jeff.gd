@@ -13,9 +13,3 @@ func _on_interact():
 	if ready_to_tp == true:
 		get_tree().change_scene_to_file("res://Scenes/side_main.tscn")
 	return
-
-
-
-
-
-	

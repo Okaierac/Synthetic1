@@ -17,15 +17,13 @@ texture = ExtResource("1_whncg")
 script = ExtResource("2_nbpfm")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-0.750381, 1.875)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ydfep")
 
 [node name="Interactable" parent="." instance=ExtResource("3_a654g")]
-interact_name = "press e to start conversation"
+interact_name = "press e to interact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 position = Vector2(0, 4)
