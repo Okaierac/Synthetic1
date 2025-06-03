@@ -21,7 +21,6 @@ const JUMP_VELOCITY = -900.0
 @onready var ac: Timer = $AC
 @onready var damage: Timer = $Damage
 
-
 func _physics_process(delta: float) -> void:
 	#Dash
 	if Input.is_action_just_pressed("Dash"):
@@ -84,7 +83,7 @@ func _on_penemy_knight_damage() -> void:
 
 
 func _on_animated_sprite_2d_player_died() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Game_Over.tscn")
+	get_tree().change_scene_to_file("res://Game Over/Game_Over.tscn")
 
 
 func _on_dash_timer_timeout() -> void:

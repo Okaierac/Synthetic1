@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0lkv7ias55sf"]
+[gd_scene load_steps=17 format=3 uid="uid://b0lkv7ias55sf"]
 
 [ext_resource type="Script" path="res://Enemies and traps/Chest.gd" id="1_3m2pi"]
 [ext_resource type="Texture2D" uid="uid://627lavgk6ioc" path="res://Chests/Chests.png" id="2_i2r28"]
 [ext_resource type="PackedScene" uid="uid://b0iu14qigxbj5" path="res://Interaction components/interactable.tscn" id="3_l1v4l"]
+[ext_resource type="AudioStream" uid="uid://bexg8hinxxpeu" path="res://Sounds/Coin Sound.mp3" id="4_g36al"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_er6wy"]
 atlas = ExtResource("2_i2r28")
@@ -103,7 +104,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tnhhc"]
 size = Vector2(257, 185)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_drrrd"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_chesn"]
 size = Vector2(278, 201)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
@@ -125,9 +126,12 @@ interact_name = "press e to Open"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
 position = Vector2(-15, 37.5)
 scale = Vector2(1.11926, 1.07598)
-shape = SubResource("RectangleShape2D_drrrd")
+shape = SubResource("RectangleShape2D_chesn")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Coin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_g36al")
 
 [connection signal="common" from="." to="." method="_on_common"]
 [connection signal="legendary" from="." to="." method="_on_legendary"]

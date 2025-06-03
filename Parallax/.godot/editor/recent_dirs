@@ -1,3 +1,4 @@
+res://Interaction components
 res://Scenes
 res://Npcs
 res://Enemies/Penemies
@@ -11,5 +12,4 @@ res://Chests
 res://Background
 res://Fonts/Glitch Font
 res://Main_Menu
-res://Interaction components
 res://Player/Scripts

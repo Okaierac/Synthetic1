@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dx3w8fdibrhax"]
+
+[node name="Interactable_Chest" type="Area2D"]

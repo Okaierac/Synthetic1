@@ -19,15 +19,10 @@ func _process( delta ):
 	
 	velocity = direction * move_speed
 	
-	pass
-	
-	
-
 	if Input.is_action_just_pressed("left") and not isFlipped:
 		animated_sprite_2d.flip_h = true  # Flip the sprite when left arrow is pressed
 		isFlipped = true  # Set the flip state to true
-
-	if Input.is_action_just_pressed("right") and isFlipped:
+	elif Input.is_action_just_pressed("right") and isFlipped:
 		animated_sprite_2d.flip_h = false  # Unflip the sprite when right arrow is pressed
 		isFlipped = false  # Set the flip state to false
 

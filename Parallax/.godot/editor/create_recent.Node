@@ -1,3 +1,7 @@
+CollisionShape2D
+Area2D
+AudioStreamPlayer2D
+AudioListener2D
 TextureButton
 TextureRect
 Timer
@@ -9,7 +13,3 @@ OptionButton
 VBoxContainer
 MarginContainer
 Control
-CollisionShape2D
-CharacterBody2D
-Area2D
-Sprite2D

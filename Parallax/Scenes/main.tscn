@@ -11,6 +11,8 @@
 
 [node name="Main_Menu" parent="." instance=ExtResource("3_toklc")]
 
+[node name="Settings" parent="." instance=ExtResource("6_fcfg3")]
+
 [node name="Top-Down" parent="." instance=ExtResource("2_0wi28")]
 
 [node name="Side" parent="." instance=ExtResource("1_varkt")]
@@ -18,5 +20,3 @@
 [node name="Game_Over" parent="." instance=ExtResource("4_0i8qq")]
 
 [node name="EndCredits" parent="." instance=ExtResource("4_wv1qv")]
-
-[node name="Settings" parent="." instance=ExtResource("6_fcfg3")]

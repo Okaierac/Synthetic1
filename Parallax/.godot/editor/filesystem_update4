@@ -16,3 +16,12 @@ res://Npcs/test_npc.tscn
 res://Npcs/jeff.tscn
 res://Npcs/barrier.tscn
 res://Scenes/settings.tscn
+res://Player/Scripts/player_side.gd
+res://Enemies and traps/Chest.gd
+res://Player/player_topdown.tscn
+res://Player/Scripts/player_topdown.gd
+res://Interaction components/interactable.gd
+res://Interaction components/interactable_chest.gd
+res://Interaction components/interactable.tscn
+res://Interaction components/interactable_chest.tscn
+res://Chest.tscn

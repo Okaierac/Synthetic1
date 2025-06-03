@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @onready var Chest_Anim: AnimatedSprite2D = $AnimatedSprite2D
 var entered = false
 @onready var interactable: Area2D = $Interactable
@@ -8,6 +9,9 @@ var Chest_Value = 0
 var teleport_to_enemy := false
 var special_values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 47]
 @onready var timer: Timer = $Timer
+@onready var coin: AudioStreamPlayer2D = $Coin
+
+signal interacted
 
 #Coins
 signal common
@@ -16,7 +20,6 @@ signal legendary
 
 func _on_body_entered(body: CharacterBody2D) -> void:
 	entered = true
-
 
 func _on_body_exited(body: CharacterBody2D) -> void:
 	entered = false
@@ -35,12 +38,13 @@ func _on_interact():
 		if Chest_Value in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
 			Chest_Anim.play("Legendary-Open")
 			legendary.emit()
+		coin.play()
+		interacted.emit()
 		timer.start()
 	return
 
 func _on_penemy_knight_killed() -> void:
 	position = GlobalVar.enemy_location
-
 
 func _on_penemy_knight_damage() -> void:
 	Chest_Value = randi_range(1, 100)
@@ -51,15 +55,13 @@ func _on_penemy_knight_damage() -> void:
 	if Chest_Value in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
 		Chest_Anim.play("Legendary_Closed")
 
-
 func _on_penemy_knight_dead() -> void:
 	print("Teleporting chest to ", GlobalVar.enemy_location)  # Debugging print
 	position = GlobalVar.enemy_location  # Teleport instantly
-	
+
 func _on_common() -> void:
 	GlobalVar.Coins += randi_range(1, 3)
 	print("coins")
-
 
 func _on_legendary() -> void:
 	GlobalVar.Coins += randi_range(5, 8)
