@@ -1,3 +1,5 @@
+TextureButton
+TextureRect
 Timer
 Button
 CheckBox
@@ -11,4 +13,3 @@ CollisionShape2D
 CharacterBody2D
 Area2D
 Sprite2D
-ProgressBar

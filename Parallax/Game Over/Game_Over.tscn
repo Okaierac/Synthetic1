@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtx31uh7omt85"]
+
+[ext_resource type="Script" path="res://Game Over/game_over.gd" id="1_8nbwv"]
+[ext_resource type="Texture2D" uid="uid://c8llhgu7ftpwf" path="res://Game Over/Graphics/thumbnail_GAME OVER.png" id="2_erv8x"]
+[ext_resource type="Texture2D" uid="uid://bukfy27wqmvp0" path="res://Game Over/Graphics/thumbnail_REPLAY.png" id="3_uhwgv"]
+[ext_resource type="Texture2D" uid="uid://bt6fhc3bvmp02" path="res://Main_Menu/Graphics/thumbnail_EXIT.png" id="4_rajgg"]
+
+[node name="Game_Over" type="Node"]
+script = ExtResource("1_8nbwv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(596.25, -8396.75)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 19.0
+offset_top = -8722.0
+offset_right = 1173.0
+offset_bottom = -8072.0
+texture = ExtResource("2_erv8x")
+
+[node name="Play Again_Button" type="TextureButton" parent="."]
+offset_left = 239.0
+offset_top = -8282.0
+offset_right = 290.0
+offset_bottom = -8273.0
+scale = Vector2(3.9625, 4.48652)
+texture_normal = ExtResource("3_uhwgv")
+
+[node name="Exit_Button" type="TextureButton" parent="."]
+offset_left = 746.0
+offset_top = -8285.0
+offset_right = 791.0
+offset_bottom = -8276.0
+scale = Vector2(3.53248, 4.52042)
+texture_normal = ExtResource("4_rajgg")
+
+[connection signal="pressed" from="Play Again_Button" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="Exit_Button" to="." method="_on_exit_button_pressed"]

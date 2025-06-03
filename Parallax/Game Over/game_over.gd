@@ -1,8 +1,5 @@
 extends Node
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -10,12 +7,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	animated_sprite_2d.animation = "default"
+	pass
 
 
-func _on_play_again_pressed() -> void:
+func _on_play_again_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/side_main.tscn")
 
 
-func _on_exit_pressed() -> void:
+func _on_exit_button_pressed() -> void:
 	get_tree().quit()
